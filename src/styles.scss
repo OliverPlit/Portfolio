@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'RobotMono500';
+    src: url('/assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('/assets/fonts/MyFont-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
