@@ -1,0 +1,96 @@
+.font {
+    font-family: 'RobotMonoMedium';
+    color: #02F4BF;
+
+    font-size: 54px;
+}
+
+
+.name {
+    font-size: 82px;
+    font-weight: 700;
+    width: 690px;
+}
+
+button {
+    width: 169px;
+    height: 52px;
+    position: relative;
+    top: 117px;
+    left: 50px;
+    transform: rotate(270deg);
+    opacity: 1;
+    gap: 10px;
+    font-family: 'RobotMonoMedium';
+    color: #E15544;
+    background: transparent;
+    border: 1px solid #02F4BF;
+    box-sizing: border-box;
+
+    &:hover {
+        color: #02F4BF;
+        cursor: pointer;
+    }
+}
+
+section {
+    background-color: #0b042d;
+    width: 1284;
+    height: 556px;
+   
+    
+
+    >div {
+         position: absolute;
+    top: 94px;
+    left: 105px;
+        width: 1337;
+        height: 554;
+        top: 2px;
+        left: -53px;
+        opacity: 1;
+
+    }
+
+
+}
+
+.headers {
+    position: absolute;
+    top: 412px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    >h2 {
+        position: relative;
+        left: 50px;
+    }
+}
+
+.arrow_down {
+    width: 22px;
+    height: 50px;
+    position: absolute;
+    top: 256px;
+    left: 647px;
+    transform: rotate(180) deg;
+    opacity: 1;
+
+    &:hover {
+        filter: invert(56%) sepia(91%) saturate(370%) hue-rotate(139deg) brightness(95%) contrast(90%);
+        cursor: pointer;
+        border: 1px solid #02F4BF;
+        padding: 2px;
+        box-sizing: border-box;
+
+    }
+
+}
+
+.hero_shot {
+    height: 539px;
+    width: 539px;
+    padding-left: 796px;
+}

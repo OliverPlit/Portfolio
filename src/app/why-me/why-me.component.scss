@@ -1,0 +1,92 @@
+* {
+    background-color: #0b042e;
+    margin: 0;
+}
+
+.font {
+    font-family: 'RobotMonoMedium';
+    color: #E15544;
+}
+
+
+span {
+    font-family: 'RobotMonoMedium';
+    color: #02F4BF;
+}
+
+p {
+    font-family: 'RobotMonoMedium';
+    color: #02F4BF;
+}
+
+section {
+    background-color: #0b042e;
+    height: 452px;
+
+
+
+
+    >div {
+        /*position: absolute;*/
+        top: 754px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+
+
+
+    }
+
+}
+
+.content {
+        width: 729px;
+
+}
+
+.picture_why_me {
+    width: 488px;
+    height: 452px;
+    padding-left: 50px;
+
+
+}
+
+
+.header_div {
+    padding-left: 206px;
+
+    >h3 {
+        display: flex;
+        width: 524px;
+
+
+    }
+}
+
+
+.button_bottom {
+    opacity: 1;
+    gap: 10px;
+    padding-left: 352px;
+
+
+}
+
+button {
+    width: 169px;
+    height: 52px;
+    opacity: 1;
+    gap: 10px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    background-color: #02F4BF;
+    border: none;
+    font-family: 'RobotMonoMedium';
+
+
+}

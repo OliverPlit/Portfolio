@@ -1,0 +1,34 @@
+* {
+    background-color: #0f063c;
+}
+
+
+h4 {
+    font-family: 'RobotMonoMedium';
+    color: #E15544;
+    font-size: 24px;
+    font-style: bold;
+
+}
+
+.font_text {
+    color: #02F4BF;
+    font-family: 'RobotMonoMedium';
+
+
+}
+
+
+section {
+    >div {
+        display: flex;
+    }
+}
+
+.container_recension {
+    width: 297px;
+    height: 246px;
+
+    gap: 32px;
+
+}

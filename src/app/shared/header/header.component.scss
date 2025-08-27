@@ -1,4 +1,49 @@
 .font {
-      font-family: 'RobotMono500', sans-serif;
+      font-family: 'RobotMonoMedium';
+      color: #E15544;
+}
 
+
+header {
+      position: sticky;
+      top: 0;
+      background-color: #0B042D;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      >div {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            padding-left: 140px;
+            >img {
+                  width: 92px;
+                  height: 44px;
+            }
+
+            >a {
+                  font-size: 22px;
+                  text-decoration: none;
+                          scroll-behavior: smooth;
+
+                  &:hover {
+                        cursor: pointer;
+                        color: #02F4BF;
+                  }
+            }
+      }
+
+      >div {
+            padding-right: 140px;
+            >p {
+                  font-size: 18px;
+                  span:hover {
+                        cursor: pointer;
+                        color: #02F4BF;
+                  }
+            }
+      }
 }
