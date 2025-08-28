@@ -1,0 +1,158 @@
+section {
+    background-color: #120745;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin input_style {
+    color: #02F4BF;
+    border: 1.5px solid;
+    border-color: #02F4BF;
+    font-family: 'RobotMonoMedium';
+    width: 507px;
+    height: 56px;
+    background: transparent;
+
+    &::placeholder {
+        color: #02F4BF;
+        font-family: 'RobotMonoMedium';
+
+    }
+}
+
+.font {
+    font-family: 'RobotMonoMedium';
+    color: #02F4BF;
+}
+
+.firstcontainer {
+    height: 162px;
+    width: 1015px;
+    padding-left: 132px;
+
+    >div {
+        @include flex-between;
+
+    }
+}
+
+
+.phone {
+    padding-right: 65px;
+}
+
+
+.div_contact {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    .contact_sections {
+        @include flex-between;
+        gap: 10px;
+
+        >img {
+            width: 28px;
+            height: 30px;
+
+
+        }
+    }
+}
+
+
+.text_contact {
+    width: 504px;
+    height: 73px;
+
+}
+
+.arrow_down {
+    width: 22px;
+    height: 50px;
+    opacity: 1;
+    /*padding-top: 3765px;*/
+    padding-left: 1292px;
+
+}
+
+.inputs {
+    display: flex;
+    gap: 40px;
+    width: 1184px;
+    height: 144px;
+    top: 3846px;
+    padding-left: 131px;
+    margin-top: 10px;
+
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        >input {
+            @include input_style();
+
+        }
+
+    }
+
+
+    >textarea {
+        color: #02F4BF;
+        border: 1.5px solid;
+        border-color: #02F4BF;
+        font-family: 'RobotMonoMedium';
+        width: 637px;
+        height: 144px;
+        background: transparent;
+
+        &::placeholder {
+            color: #02F4BF;
+            font-family: 'RobotMonoMedium';
+
+        }
+    }
+}
+
+.last_section {
+    font-family: 'RobotMonoMedium';
+    color: #02F4BF;
+
+    width: 1185px;
+    height: 74px;
+    margin-top: 50px;
+    padding-left: 130.5px;
+
+    >label {
+        >input {
+            border: 1px #02F4BF solid;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #E15544;
+}
+
+button {
+    width: 104px;
+    height: 52px;
+    font-family: 'RobotMonoMedium';
+color: #827B7B;
+    margin-left: 1081px;
+    gap: 10px;
+    border-width: 1px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    background-color: transparent;
+    border: 1px solid #827B7B
+
+}

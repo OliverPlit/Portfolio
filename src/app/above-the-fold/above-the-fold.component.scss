@@ -1,7 +1,6 @@
 .font {
     font-family: 'RobotMonoMedium';
     color: #02F4BF;
-
     font-size: 54px;
 }
 
@@ -35,17 +34,14 @@ button {
 
 section {
     background-color: #0b042d;
-    width: 1284;
-    height: 556px;
-   
-    
+    height: 100vh;
+
 
     >div {
-         position: absolute;
-    top: 94px;
-    left: 105px;
-        width: 1337;
-        height: 554;
+
+        width: 1284px;
+        height: 554px;
+        position: absolute;
         top: 2px;
         left: -53px;
         opacity: 1;
@@ -56,17 +52,15 @@ section {
 }
 
 .headers {
-    position: absolute;
-    top: 412px;
+    position: relative;
+    width: 808px;
+    height: 142px;
+    top: 472px;
     left: 50px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
-    >h2 {
-        position: relative;
-        left: 50px;
-    }
 }
 
 .arrow_down {
@@ -90,7 +84,8 @@ section {
 }
 
 .hero_shot {
-    height: 539px;
+    height: 554px;
     width: 539px;
-    padding-left: 796px;
+    position: absolute;
+    left: 796px;
 }
