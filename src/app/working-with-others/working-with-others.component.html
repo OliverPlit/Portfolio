@@ -2,12 +2,13 @@
     <h4>Need a team player ? Here is what my colleagues said about me</h4>
     <div>
         <img src="../../assets/arrows/arrow_curve_down.png" alt="">
-        <div class="container_recension">
-            <h4>Eric Braun</h4>
-            <span class="font_text">Join</span>
-            <p class="font_text">Oliver war im Team eine starke Unterstützung – sehr hilfsbereit, zuverlässig und mit vielen kreativen
-                Ideen. Seine Beiträge haben das Projekt nicht nur vorangebracht, sondern auch bereichert. Die
-                Zusammenarbeit mit ihm war durchweg positiv und hat richtig Spaß gemacht.</p>
+        <div class="container_recension" *ngFor="let feedback of feedbacks;">
+            <div>
+                <h4>{{feedback.name}}</h4>
+                <span class="font_text">Project {{feedback.project}}</span>
+            </div>
+
+            <p class="font_text">{{feedback.description}}</p>
         </div>
 
     </div>

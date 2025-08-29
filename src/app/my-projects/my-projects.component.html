@@ -1,13 +1,22 @@
 <section>
-        <h2>My Projects</h2>
-    <div>
-        <img src="" alt="">
+    <h2>My Projects</h2>
+  <div *ngFor="let project of projects; let i = index" 
+     class="project" 
+     [ngClass]="{ 'reverse': i % 2 !== 0 }">
+        <img [src]="project.image" [alt]="project.title">
         <div>
-            <h4>Join</h4>
-            <span>Angular | TypeScript | HTML | CSS | Firebase</span>
+            <div class="subheader">
+                <h4>{{project.title}}</h4>
+                <span>{{project.technologies}}</span>
+            </div>
+
             <div>
-                <button>GitHub</button>
-                <button>Live Test</button>
+                <span>{{project.description}} </span>
+                <div class="buttons">
+                    <button class="button_git">GitHub</button>
+                    <button class="button_green">Live Test</button>
+                </div>
+
             </div>
         </div>
     </div>

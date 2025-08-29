@@ -52,13 +52,12 @@ footer {
 }
 
 .icons_footer {
-    display: flex;
-    gap: 5px;
+    
 
-    |img {
+    >img {
         width: 30px;
         height: 30px;
-
+padding-right: 35px;
 
     }
 }

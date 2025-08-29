@@ -1,37 +1,36 @@
-* {
-    background-color: #1b0a6e;
-}
 
 
 
 
 h2 {
     font-family: 'RobotMonoMedium';
-      color: #E15544;
-      font-size: 54px;
-      padding-left: 111px;
+    color: #E15544;
+    font-size: 54px;
+    padding-left: 111px;
 
 }
 
 
 section {
-height: 423px;
+      background: linear-gradient(to bottom, #180963, #126ad2);
 
->div {
-     display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  gap: 20px;
-width: 1219px;
-height: 325px;
-padding-top: 98px;
-padding-left: 111.5px;
-opacity: 1;
-gap: 100px;
+    height: 423px;
+    padding-bottom: 80px;
 
->img {
-    width: 88px;
-    height: 100px;
-}
-}
+    >div {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        width: 1219px;
+        height: 325px;
+        padding-top: 50px;
+        padding-left: 111.5px;
+        opacity: 1;
+
+        >img {
+            width: 88px;
+            height: 100px;
+        }
+    }
 
 }

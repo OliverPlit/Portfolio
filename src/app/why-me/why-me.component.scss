@@ -1,5 +1,4 @@
 * {
-    background-color: #0b042e;
     margin: 0;
 }
 
@@ -17,39 +16,35 @@ span {
 p {
     font-family: 'RobotMonoMedium';
     color: #02F4BF;
+    padding-left: 42px;
+    padding-top: 20px;
+    text-align: right;
+
 }
 
 section {
-    background-color: #0b042e;
+  background: linear-gradient(to bottom, #0b042d, #180963);
     height: 452px;
-
-
-
+    padding-left: 105px;
+    padding-bottom: 80px;
 
     >div {
-        /*position: absolute;*/
-        top: 754px;
-        width: 100%;
+        width: 1224px;
         display: flex;
         justify-content: space-between;
         gap: 8px;
-
-
-
-
     }
 
 }
 
 .content {
-        width: 729px;
+    width: 729px;
 
 }
 
 .picture_why_me {
     width: 488px;
     height: 452px;
-    padding-left: 50px;
 
 
 }
@@ -60,33 +55,156 @@ section {
 
     >h3 {
         display: flex;
-        /*width: 524px;*/
+        justify-content: flex-end;
+    }
+}
+
+
+.location_div {
+    width: 568px;
+    height: 186px;
+    padding-top: 10px;
+    padding-left: 159px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+
+    >div {
+        display: flex;
+
+        >div {
+            >div {
+                >span {
+                    padding-left: 15px;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+.location_width {
+                width: 192px;
+
+}
+
+.located_in {
+
+    display: flex;
+    gap: 64px;
+
+    >div {
+        display: flex;
+        align-items: center;
 
 
     }
 }
 
+.relocate_div {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    padding-right: 60px;
+
+
+
+
+    >img {
+        padding-right: 15px;
+    }
+}
+
+.icon_relocate {
+    display: flex;
+    justify-content: flex-end;
+    gap: 208px;
+}
+
+.remote_div {
+    height: 58px;
+    justify-content: space-between;
+    padding-left: 168px;
+    gap: 100px;
+
+
+}
+
+.remote_text {
+    width: 125px;
+    height: 42px;
+          text-align: left;
+
+
+}
+
+.open_to {
+        padding-left: 15px;
+    }
+
+.remote_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+  
+}
+
+.icon_remote {
+    width: 53px;
+    height: 47px;
+
+
+}
+
+
+.arrow_remote {
+    display: flex;
+    gap: 90px;
+}
+
 
 .button_bottom {
-    opacity: 1;
+    height: 52px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
     gap: 10px;
     padding-left: 352px;
+    margin-top: 15px;
 
-
-}
-
-button {
-    width: 169px;
-    height: 52px;
-    opacity: 1;
-    gap: 10px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    background-color: #02F4BF;
-    border: none;
-    font-family: 'RobotMonoMedium';
 
 
 }
+
+.arrow_down_relocate {
+    width: 22px;
+    height: 56px;
+    border-width: 3px;
+}
+
+.arrow_up_remote {
+    width: 24pxs;
+    height: 40px;
+    border-width: 3px;
+
+}
+
+.arrow_loop_remote {
+    width: 27px;
+    height: 56px;
+    border-width: 3px;
+
+}
+
+
+
+.icon {
+    width: 33px;
+    height: 41px;
+    top: 8px;
+
+}
+

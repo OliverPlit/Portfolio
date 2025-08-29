@@ -19,9 +19,30 @@ h4 {
 }
 
 
+img {
+    width: 38px;
+height: 97px;
+opacity: 1;
+border-width: 3px;
+
+}
+
 section {
+    padding-left: 130px;
+    height: 307px;
+    opacity: 1;
+    gap: 32px;
+
+    padding-bottom: 150px;
+
     >div {
         display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+        width: 1103px;
+        height: 246px;
+        opacity: 1;
+        gap: 32px;
     }
 }
 
@@ -30,5 +51,9 @@ section {
     height: 246px;
 
     gap: 32px;
-
+>div {
+margin-top: 40px;
+margin-bottom:40px;
 }
+}
+
