@@ -1,8 +1,6 @@
 <section>
     <h2>My Projects</h2>
-  <div *ngFor="let project of projects; let i = index" 
-     class="project" 
-     [ngClass]="{ 'reverse': i % 2 !== 0 }">
+    <div *ngFor="let project of projects; let i = index" class="project" [ngClass]="{ 'reverse': i % 2 !== 0 }">
         <img [src]="project.image" [alt]="project.title">
         <div>
             <div class="subheader">
@@ -13,8 +11,8 @@
             <div>
                 <span>{{project.description}} </span>
                 <div class="buttons">
-                    <button class="button_git">GitHub</button>
-                    <button class="button_green">Live Test</button>
+                    <a class="button_git" href="{{project.github}}" target="_blank">GitHub</a>
+                    <a class="button_green" href="{{project.live}}" target="_blank">Live Test</a>
                 </div>
 
             </div>

@@ -1,16 +1,15 @@
 section {
-    height: 1241px;
-    background: linear-gradient(to bottom left, #126ad2, #0d0535);
+  background: linear-gradient(to bottom, #1c0a73, #0d0536);
     display: flex;
     align-items: center;
     flex-direction: column;
 
-
     >div {
         width: 1178px;
         display: flex;
-        justify-content: space-between;
         gap: 40px;
+        margin-bottom: 80px;
+
 
         >img {
             z-index: 3;
@@ -63,13 +62,18 @@ span {
 }
 
 
+
 .button_git {
     width: 169px;
     height: 52px;
+    display: flex;              
+    align-items: center;        
+    justify-content: center; 
     gap: 10px;
     font-family: 'RobotMonoMedium';
     color: #E15544;
     background: transparent;
+    text-decoration: none;
     border: 1px solid #02F4BF;
     box-sizing: border-box;
 font-size: 18px;

@@ -1,10 +1,9 @@
 section {
-    background-color: #120745;
+  background: linear-gradient(to bottom, #120848, #190a60);
 }
 
 @mixin flex-between {
     display: flex;
-    justify-content: space-between;
 }
 
 @mixin input_style {
@@ -35,6 +34,9 @@ section {
 
     >div {
         @include flex-between;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 20px;
 
     }
 }
@@ -44,6 +46,14 @@ section {
     padding-right: 65px;
 }
 
+
+.arrow_top {
+    width: 82px;
+height: auto;
+margin-top: 20px;
+border-width: 3px;
+
+}
 
 .div_contact {
     display: flex;
@@ -153,6 +163,14 @@ color: #827B7B;
     padding-bottom: 15px;
     padding-left: 30px;
     background-color: transparent;
-    border: 1px solid #827B7B
+    border: 1px solid #827B7B;
+    width: 104px;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 120%;
+letter-spacing: 0%;
+
+
 
 }

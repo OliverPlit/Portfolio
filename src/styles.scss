@@ -1,5 +1,5 @@
 * {
-    margin: 0 ;
+    margin: 0;
 
 }
 
@@ -18,21 +18,31 @@
 }
 
 
+h1 {
+    font-family: 'RobotMonoMedium';
+    color: #E15544;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+}
+
 h2 {
     font-family: 'RobotMonoMedium';
-      color: #E15544;
-      font-size: 54px;
-      padding-left: 111px;
+    color: #E15544;
+    font-size: 54px;
 
 }
 
 
 .button_green {
-    width: 169px;
-    height: 52px;
+
+    text-decoration: none;
     opacity: 1;
     gap: 10px;
     font-size: 18px;
+    color: #0B042D;
     padding-top: 15px;
     padding-right: 30px;
     padding-bottom: 15px;
@@ -41,5 +51,8 @@ h2 {
     border: none;
     font-family: 'RobotMonoMedium';
 
+    &:hover {
+        color: #E15544;
+    }
 
 }

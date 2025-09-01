@@ -1,6 +1,5 @@
-* {
-    background-color: #0f063c;
-}
+
+
 
 
 h4 {
@@ -20,25 +19,27 @@ h4 {
 
 
 img {
-    width: 38px;
-height: 97px;
-opacity: 1;
-border-width: 3px;
+    width: 55px;
+    height: 97px;
+    opacity: 1;
+    border-width: 3px;
+margin-top: 50px;
+
 
 }
 
 section {
-    padding-left: 130px;
+    background: linear-gradient(to bottom, #0d0536, #120848);
     height: 307px;
     opacity: 1;
-    gap: 32px;
-
+padding-left: 165px;
     padding-bottom: 150px;
+     
 
     >div {
         display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+        justify-content: center;
+        flex-wrap: wrap;
         width: 1103px;
         height: 246px;
         opacity: 1;
@@ -51,9 +52,9 @@ section {
     height: 246px;
 
     gap: 32px;
->div {
-margin-top: 40px;
-margin-bottom:40px;
-}
-}
 
+    >div {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

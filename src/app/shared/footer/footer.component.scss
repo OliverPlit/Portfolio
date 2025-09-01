@@ -1,14 +1,15 @@
 footer {
     display: flex;
 
-    background-color: #180a5c;
+  background: linear-gradient(to bottom, #190a60, #1d0d6f);
     height: 196px;
     gap: 16px;
+    padding-top: 70px;
     padding-bottom: 65px;
     align-items: center;
 
     >div {
-        width: 1439px;
+        width: 1350px;
         display: flex;
         justify-content: space-between;
     }
