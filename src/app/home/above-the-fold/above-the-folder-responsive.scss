@@ -1,0 +1,103 @@
+
+
+@media (max-width: 1354px) {
+  .headers {
+    top: 350px;
+    left: 30px;
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 770px) {
+  .font {
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 60px;
+    width: 100%;
+  }
+
+  button {
+    width: 140px;
+    height: 44px;
+    top: 90px;
+    left: 30px;
+  }
+
+  .headers {
+    top: 250px;
+    left: 20px;
+    width: 90%;
+  }
+
+  .arrow_down {
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .hero_shot {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    width: 300px;
+    margin: 20px auto 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .font {
+    font-size: 28px;
+  }
+
+  .name {
+    font-size: 44px;
+  }
+
+  button {
+    width: 120px;
+    height: 36px;
+    top: 70px;
+    left: 20px;
+  }
+
+  .arrow_down {
+    top: 150px;
+    width: 18px;
+    height: 40px;
+  }
+
+  .hero_shot {
+    width: 220px;
+  }
+}
+
+@media (max-width: 320px) {
+  .font {
+    font-size: 24px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  button {
+    width: 100px;
+    height: 32px;
+    top: 60px;
+    left: 10px;
+  }
+
+  .arrow_down {
+    top: 120px;
+    width: 16px;
+    height: 36px;
+  }
+
+  .hero_shot {
+    width: 180px;
+  }
+}

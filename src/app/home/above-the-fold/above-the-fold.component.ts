@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   imports: [],
   standalone: true,
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
-})
+styleUrls: [
+    './above-the-fold.component.scss',
+    './above-the-folder-responsive.scss',
+  ]})
 export class AboveTheFoldComponent {
 
 }

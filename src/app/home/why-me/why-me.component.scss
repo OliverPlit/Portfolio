@@ -23,7 +23,7 @@ p {
 }
 
 section {
-  background: linear-gradient(to bottom, #0b042d, #180963);
+    background: linear-gradient(to bottom, #0b042d, #180963);
     height: 452px;
     padding-left: 105px;
     padding-bottom: 80px;
@@ -86,7 +86,7 @@ section {
 }
 
 .location_width {
-                width: 192px;
+    width: 192px;
 
 }
 
@@ -135,28 +135,39 @@ section {
 .remote_text {
     width: 125px;
     height: 42px;
-          text-align: left;
+    text-align: left;
 
 
 }
 
 .open_to {
-        padding-left: 15px;
-    }
+    padding-left: 15px;
+}
 
 .remote_section {
     display: flex;
     align-items: center;
     gap: 10px;
 
-  
+
 }
 
 .icon_remote {
     width: 53px;
     height: 47px;
+    background-image: url('../../../assets/icons/Remote.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 
+    &:hover {
+        cursor: pointer;
+        background-image: url('../../../assets/hover/remote-hover.png');
+         display: flex;
+    align-items: center;
+    transform: scale(1.15);
 
+    }
 }
 
 
@@ -208,3 +219,57 @@ section {
 
 }
 
+.maps {
+    position: relative;
+    width: 33px;
+    height: 41px;
+
+    .original {
+        position: relative;
+        width: 33px;
+        height: 41px;
+        z-index: 2;
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .hover_img {
+        position: relative;
+        width: 19px;
+        height: 7px;
+        left: 7px;
+        border-width: 2px;
+        transform: translateY(-12px);
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover .hover_img {
+        opacity: 1;
+    }
+
+    &:hover .original {
+        margin-top: -5px;
+    }
+}
+
+.relocate {
+    display: inline-block;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        animation: rotateRight 0.5s forwards;
+    }
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(6deg) scale(1.2);
+    }
+}

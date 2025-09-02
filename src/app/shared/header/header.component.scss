@@ -1,50 +1,142 @@
 .font {
-      font-family: 'RobotMonoMedium';
-      color: #E15544;
+  font-family: 'RobotMonoMedium';
+  color: #E15544;
 }
 
-
 header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background-color: #0B042D;
-      height: 92px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  background: linear-gradient(to bottom, #0B042D 55px, rgba(11, 4, 45, 0) 92px);
+  padding: 0 100px; 
 
+  >div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-left: 0;
+    flex-wrap: wrap;
 
-      >div {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            padding-left: 140px;
-            >img {
-                  width: 92px;
-                  height: 44px;
-            }
+    >img {
+      width: 92px;
+      height: 44px;
+      max-width: 25%;
+    }
 
-            >a {
-                  font-size: 22px;
-                  text-decoration: none;
-                          scroll-behavior: smooth;
+    >a {
+      font-size: 22px;
+      text-decoration: none;
+      scroll-behavior: smooth;
 
-                  &:hover {
-                        cursor: pointer;
-                        color: #02F4BF;
-                  }
-            }
+      &:hover {
+        cursor: pointer;
+        color: #02F4BF;
       }
 
-      >div {
-            padding-right: 140px;
-            >p {
-                  font-size: 18px;
-                  span:hover {
-                        cursor: pointer;
-                        color: #02F4BF;
-                  }
-            }
+      &:focus {
+        text-decoration: underline;
+        color: #02F4BF;
       }
+    }
+  }
+
+  >div:last-child {
+    padding-right: 0;
+
+    >p {
+      font-size: 18px;
+
+      span:hover {
+        cursor: pointer;
+        color: #02F4BF;
+      }
+    }
+  }
+
+  a:target {
+    text-decoration: underline;
+    color: #02F4BF;
+  }
+
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+
+    >div:first-child {
+      gap: 8px;
+
+      >img {
+        width: 60px;
+        height: auto;
+      }
+
+      >a {
+        font-size: 14px;
+      }
+    }
+
+    >div:last-child {
+      margin-top: 5px;
+
+      >p {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  @media (min-width: 321px) and (max-width: 770px) {
+    padding: 0 15px;
+
+    >div:first-child {
+      gap: 24px;
+
+      >img {
+        width: 75px;
+        height: auto;
+      }
+
+      >a {
+        font-size: 16px;
+      }
+    }
+
+    >div:last-child {
+      >p {
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  @media (min-width: 771px) and (max-width: 1024px) {
+    padding: 0 50px;
+
+    >div:first-child {
+      gap: 36px;
+
+      >img {
+        width: 85px;
+        height: auto;
+      }
+
+      >a {
+        font-size: 18px;
+      }
+    }
+
+    >div:last-child {
+      >p {
+        font-size: 16px;
+      }
+    }
+  }
+
 }
