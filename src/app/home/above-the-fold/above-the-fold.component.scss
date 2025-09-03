@@ -9,20 +9,28 @@ h2 {
 }
 
 .name {
-    font-size: 82px;
     font-weight: 700;
-    width: 690px;
+    font-style: Bold;
+    font-size: 82px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
 }
 
 button {
     width: 169px;
     height: 52px;
-   margin-top: 117px;
+    margin-top: 157px;
     margin-left: 50px;
     transform: rotate(270deg);
     opacity: 1;
     gap: 10px;
     font-family: 'RobotMonoMedium';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
     color: #E15544;
     background: transparent;
     border: 1px solid #02F4BF;
@@ -65,21 +73,36 @@ section {
 
 }
 
+
+.job {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 54px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+}
+
 .arrow_down {
     width: 22px;
     height: 50px;
     position: absolute;
-    top: 256px;
-    left: 647px;
+    top: 336px;
+    left: 715px;
     transform: rotate(180) deg;
     opacity: 1;
 
     &:hover {
-        filter: invert(56%) sepia(91%) saturate(370%) hue-rotate(139deg) brightness(95%) contrast(90%);
         cursor: pointer;
+        background-image: url('../../../assets/hover/arrow-down-hover.png');
+        background-repeat: no-repeat;
+        background-position: center;
         border: 1px solid #02F4BF;
-        padding: 2px;
+        padding: 10px;
         box-sizing: border-box;
+        width: 22px;
+        height: 55px;
+
 
     }
 
@@ -88,7 +111,7 @@ section {
 .hero_shot {
     height: 554px;
     width: 539px;
-    padding-left: 796px;
+    padding-left: 886px;
     padding-right: 30px;
     margin-bottom: 100px;
 }

@@ -26,6 +26,7 @@ section {
         padding-top: 50px;
         padding-left: 118.5px;
         opacity: 1;
+         overflow: visible;
 
         >img {
             width: 88px;
@@ -33,4 +34,35 @@ section {
         }
     }
 
+}
+
+
+.img-hover-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 253px;
+height: 108px;
+
+
+}
+
+.img-hover-text::after {
+  content: "I am always happy to learn new technologies, just tell me what you need.";
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #02F4BF;
+  font-family: 'RobotMonoMedium';
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10; /* hoch genug, damit er nicht hinter anderen Elementen liegt */
+}
+
+.img-hover-text:hover::after {
+  opacity: 1;
 }
