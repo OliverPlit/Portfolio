@@ -46,8 +46,8 @@ section {
     width: 28px;
     height: 30px;
     background-repeat: no-repeat;
-    background-size: contain;  
-    background-position: center; 
+    background-size: contain;
+    background-position: center;
     cursor: pointer;
 }
 
@@ -94,8 +94,6 @@ section {
 }
 
 
-
-
 .text_contact {
     width: 504px;
     height: 73px;
@@ -103,16 +101,23 @@ section {
 }
 
 .arrow_down {
-  width: 22px;
-  height: 50px;
-  background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
-  background-size: contain;
+    position: relative;
+    left: 1292px;
+    bottom: 17px;
+    width: 22px;
+    height: 50px;
+    background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
+    background-size: contain;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: border-color .25s ease, background-image .25s ease;
 
-  &:hover {
-    cursor: pointer;
-    background-image: url('../../../assets/hover/arrow-up-hover.png');
-    border: 1px solid #02F4BF;
-  }
+    &:hover {
+        cursor: pointer;
+        background-image: url('../../../assets/hover/arrow-up-hover.png');
+        outline: 1px solid #02F4BF;
+    }
 }
 
 
@@ -134,6 +139,10 @@ section {
         >input {
             @include input_style();
 
+            &:hover {
+                cursor: pointer;
+            }
+
         }
 
     }
@@ -152,6 +161,10 @@ section {
             color: #02F4BF;
             font-family: 'RobotMonoMedium';
 
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -175,6 +188,19 @@ section {
 a {
     text-decoration: none;
     color: #E15544;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+    &:hover {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
 }
 
 button {

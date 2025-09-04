@@ -1,7 +1,6 @@
 footer {
     display: flex;
-
-  background: linear-gradient(to bottom, #190a60, #1d0d6f);
+    background: linear-gradient(to bottom, #190a60, #1d0d6f);
     height: 196px;
     gap: 16px;
     padding-top: 70px;
@@ -12,6 +11,7 @@ footer {
         width: 1350px;
         display: flex;
         justify-content: space-between;
+        align-items: end;
     }
 }
 
@@ -29,7 +29,6 @@ footer {
     font-family: 'RobotMonoMedium';
     color: #E15544;
     display: flex;
-    align-items: center;
     flex-direction: column;
 
     >span {
@@ -48,17 +47,40 @@ footer {
             margin-top: 30px;
             text-decoration: none;
             color: #E15544;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0%;
+
+            &:hover {
+                cursor: pointer;
+                color: #02F4BF;
+            }
         }
     }
 }
 
 .icons_footer {
-    
 
-    >img {
+
+    >a {
         width: 30px;
         height: 30px;
-padding-right: 35px;
+        padding-right: 35px;
 
     }
+}
+
+
+.github:hover {
+    content: url("../../../assets/hover/Github-hover.png");
+    cursor: pointer;
+}
+
+.contact:hover {
+    content: url("../../../assets/hover/mail-footer-hover.png");
+}
+
+.LinkedIn:hover {
+    content: url("../../../assets/hover/LinkedIn-hover.png");
 }

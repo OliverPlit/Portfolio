@@ -17,7 +17,12 @@ h2 {
 
 }
 
-button {
+.button_above {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
     width: 169px;
     height: 52px;
     margin-top: 157px;
@@ -35,6 +40,7 @@ button {
     background: transparent;
     border: 1px solid #02F4BF;
     box-sizing: border-box;
+    text-decoration: none;
 
     &:hover {
         color: #02F4BF;

@@ -1,5 +1,5 @@
 section {
-  background: linear-gradient(to bottom, #1c0a73, #0d0536);
+    background: linear-gradient(to bottom, #1c0a73, #0d0536);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,12 +10,16 @@ section {
         gap: 40px;
         margin-bottom: 80px;
 
-
         >img {
             z-index: 3;
             width: 588px;
             height: 371px;
+            filter: brightness(90%);
 
+            &:hover {
+                filter: brightness(100%);
+
+            }
 
         }
     }
@@ -55,10 +59,17 @@ span {
     text-align: right;
 }
 
+
+.project.reverse .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .buttons {
     margin-top: 50px;
     display: flex;
     gap: 24px;
+
 }
 
 
@@ -66,9 +77,9 @@ span {
 .button_git {
     width: 169px;
     height: 52px;
-    display: flex;              
-    align-items: center;        
-    justify-content: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     font-family: 'RobotMonoMedium';
     color: #E15544;
@@ -76,13 +87,27 @@ span {
     text-decoration: none;
     border: 1px solid #02F4BF;
     box-sizing: border-box;
-font-size: 18px;
-line-height: 120%;
-letter-spacing: 0%;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    transition: color 0.6s ease;
 
     &:hover {
         color: #02F4BF;
         cursor: pointer;
     }
 
+    .button_git span {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+
+    .button_git:hover span {
+        transform: scale(1.08) translateY(-2px);
+    }
+
+    .button_git:active {
+        border-color: #E15544;
+    }
 }

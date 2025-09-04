@@ -37,12 +37,15 @@ section {
 }
 
 
+.material_design {
+  width: 94px !important;
+height: 125px !important;
+
+}
 .img-hover-text {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  width: 253px;
-height: 108px;
+ 
 
 
 }
@@ -50,17 +53,21 @@ height: 108px;
 .img-hover-text::after {
   content: "I am always happy to learn new technologies, just tell me what you need.";
   position: absolute;
-  left: 110%;
   top: 50%;
+   width: 253px;
+height: 108px;
+padding-left: 20px;
   transform: translateY(-50%);
   color: #02F4BF;
   font-family: 'RobotMonoMedium';
-  padding: 5px 10px;
-  border-radius: 5px;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  z-index: 10; /* hoch genug, damit er nicht hinter anderen Elementen liegt */
+  z-index: 10;
+  font-weight: 400;
+font-size: 18px;
+line-height: 120%;
+letter-spacing: 0%;
 }
 
 .img-hover-text:hover::after {
