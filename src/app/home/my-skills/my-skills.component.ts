@@ -4,7 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-my-skills',
   imports: [],
   templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+  styleUrls:[
+    './my-skills.component.scss',
+    './my-skills-responsive.scss'
+  ] 
 })
 export class MySkillsComponent {
 

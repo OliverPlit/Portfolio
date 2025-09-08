@@ -1,0 +1,51 @@
+@media (max-width: 1220px) {
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        justify-content: center;
+
+    }
+
+    .project img {
+        order: 2;
+        /* Bild nach unten */
+    }
+
+    .project>div {
+        order: 1;
+        /* Text nach oben */
+    }
+
+    .project .buttons {
+        order: 3;
+    }
+
+    h2 {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    h2 {
+        justify-content: center;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 32px;
+        line-height: 120%;
+        letter-spacing: 0%;
+
+    }
+}

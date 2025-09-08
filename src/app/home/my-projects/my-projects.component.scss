@@ -5,14 +5,17 @@ section {
     flex-direction: column;
 
     >div {
-        width: 1178px;
+        width: 100%;
+        max-width: 1178px;
         display: flex;
         gap: 40px;
         margin-bottom: 80px;
+        padding: 30px;
 
         >img {
             z-index: 3;
-            width: 588px;
+            width: 100%;
+            max-width: 588px;
             height: 371px;
             filter: brightness(90%);
 
@@ -97,10 +100,7 @@ span {
         cursor: pointer;
     }
 
-    .button_git span {
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
+   
 
 
     .button_git:hover span {

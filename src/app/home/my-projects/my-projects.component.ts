@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-my-projects',
   imports: [CommonModule],
   templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.scss'
+  styleUrls: ['./my-projects.component.scss',
+    './my-projects-responsive.scss']
 })
 export class MyProjectsComponent {
   projects = Projects;
