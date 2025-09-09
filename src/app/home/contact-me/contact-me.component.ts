@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   imports: [],
   standalone: true,
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss'
+  styleUrls: [ './contact-me.component.scss',
+  './contact-me-responsive.scss']
 })
 export class ContactMeComponent {
 

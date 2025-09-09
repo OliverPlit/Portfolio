@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-working-with-others',
   imports: [CommonModule],
   templateUrl: './working-with-others.component.html',
-  styleUrl: './working-with-others.component.scss'
+  styleUrls: ['./working-with-others.component.scss',
+  './working-with-others-responsive.scss']
 })
 export class WorkingWithOthersComponent {
 feedbacks = Feedbacks;

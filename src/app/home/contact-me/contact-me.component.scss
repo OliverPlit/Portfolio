@@ -28,8 +28,7 @@ section {
 }
 
 .firstcontainer {
-    height: 162px;
-    width: 1015px;
+   
     padding-left: 132px;
 
     >div {
@@ -101,9 +100,8 @@ section {
 }
 
 .arrow_down {
-    position: relative;
-    left: 1292px;
-    bottom: 17px;
+      margin-left: auto;   /* schiebt es nach rechts */
+  margin-right: 200px;
     width: 22px;
     height: 50px;
     background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
@@ -124,10 +122,7 @@ section {
 .inputs {
     display: flex;
     gap: 40px;
-    width: 1184px;
     height: 144px;
-    top: 3846px;
-    padding-left: 131px;
     margin-top: 10px;
 
 

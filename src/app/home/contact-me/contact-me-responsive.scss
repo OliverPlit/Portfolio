@@ -1,0 +1,40 @@
+@media (max-width: 1050px) {
+    .arrow_top {
+        display: none;
+    }
+
+
+    .firstcontainer {
+        display: flex;
+        flex-direction: column;
+
+        >div {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+.firstcontainer > div:nth-child(2) {   /* der innere Wrapper */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputs { order: 1; }      /* bleibt in firstcontainer */
+  .div_contact { order: 2; } 
+
+    .inputs {
+        order: 1;
+        justify-content: center;
+
+        >div {
+            >input {
+                width: auto;
+
+            }
+        }
+
+    }
+
+    .div_contact {
+        order: 2;
+    }
+}

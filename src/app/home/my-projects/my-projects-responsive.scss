@@ -1,25 +1,33 @@
-@media (max-width: 1220px) {
-
+@media (max-width: 1150px) {
     .project {
         display: flex;
         flex-direction: column;
         padding: 30px;
         justify-content: center;
-
+        align-items: center;
+        text-align: center;
     }
 
-    .project img {
-        order: 2;
-        /* Bild nach unten */
-    }
-
-    .project>div {
+    .project .content {
         order: 1;
-        /* Text nach oben */
+    }
+
+    .project>img {
+        order: 2;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project .button_responsive {
+        order: 3;
+        display: flex !important;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: center;
     }
 
     .project .buttons {
-        order: 3;
+        display: none;
     }
 
     h2 {
@@ -32,10 +40,54 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+h2 {
+    margin-bottom: 0;
+}
     .project {
-        display: flex;
         flex-direction: column;
+        margin-bottom: 10px !important;
+
+        >img {
+            width: 337px !important;
+            height: 214px !important;
+
+
+        }
+    }
+}
+
+@media (max-width: 500px) {
+.project {
+       
+
+        >img {
+            width: 287px !important;
+            height: 164px !important;
+
+
+        }
+    }
+
+
+    h4 {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+
+    }
+
+
+    span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+
     }
 
 
@@ -48,4 +100,38 @@
         letter-spacing: 0%;
 
     }
+
+    .button_green {
+gap: 10px;
+padding-top: 10px;
+padding-right: 17px;
+padding-bottom: 10px;
+padding-left: 17px;
+
+    }
+
+    .button_git {
+        width: 98px;
+height: 43px;
+border-width: 1px;
+gap: 10px;
+padding-top: 12px;
+padding-right: 20px;
+padding-bottom: 12px;
+padding-left: 20px;
+
+    }
 }
+
+
+@media (max-width: 500px) {
+.project {
+       
+
+        >img {
+            width: 257px !important;
+            height: 134px !important;
+
+
+        }
+    }}

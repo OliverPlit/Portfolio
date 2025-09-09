@@ -1,7 +1,3 @@
-
-
-
-
 h4 {
     font-family: 'RobotMonoMedium';
     color: #E15544;
@@ -23,7 +19,7 @@ img {
     height: 97px;
     opacity: 1;
     border-width: 3px;
-margin-top: 50px;
+    margin-top: 50px;
 
 
 }
@@ -32,24 +28,25 @@ section {
     background: linear-gradient(to bottom, #0d0536, #120848);
     height: 307px;
     opacity: 1;
-padding-left: 165px;
+    padding-left: 165px;
     padding-bottom: 150px;
-     
 
-    >div {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 1103px;
-        height: 246px;
-        opacity: 1;
-        gap: 32px;
-    }
+}
+
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1103px;
+    height: 246px;
+    opacity: 1;
+    gap: 32px;
 }
 
 .container_recension {
     width: 297px;
     height: 246px;
+    flex-shrink: 0;
+
 
     gap: 32px;
 
@@ -57,4 +54,11 @@ padding-left: 165px;
         margin-top: 40px;
         margin-bottom: 40px;
     }
+}
+
+.feedback-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 30px;
 }

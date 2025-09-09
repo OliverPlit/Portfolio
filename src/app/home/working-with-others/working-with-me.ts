@@ -13,7 +13,7 @@ export const Feedbacks = [
     },
     {
         name: 'Flynn',
-        description: '´´Oli hat sich aktiv an den Gruppengesprächen beteiligt und mit seiner offenen Art zu einer angenehmen Zusammenarbeit beigetragen. Besonders in den Diskussionen konnte er eigene Gedanken einbringen und so die Arbeit im Team bereichern. Durch seine freundliche und zugängliche Art war die Zusammenarbeit mit ihm stets angenehm.´´',
+        description: '´´Oli hat sich aktiv an den Gruppengesprächen beteiligt und mit seiner offenen Art zu einer angenehmen Zusammenarbeit beigetragen. Besonders in den Diskussionen konnte er eigene Gedanken einbringen und so die Arbeit im Team bereichern.´´',
         project: 'Join'
 
     },

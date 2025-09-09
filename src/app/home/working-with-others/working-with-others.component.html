@@ -1,16 +1,18 @@
 <section>
-    <h4>Need a team player ? Here is what my colleagues said about me</h4>
-    <div>
-        <img src="../../assets/arrows/arrow_working.png" alt="">
-        <div class="container_recension" *ngFor="let feedback of feedbacks;">
-            <div>
-                <h4>{{feedback.name}}</h4>
-                <span class="font_text">Project {{feedback.project}}</span>
-            </div>
+  <h4>
+    Need a team player ? <span class="breakable">Here is what my colleagues said about me</span>
+  </h4>
 
-            <p class="font_text">{{feedback.description}}</p>
+  <div class="feedback-wrapper">
+    <img class="arrow" src="../../assets/arrows/arrow_working.png" alt="">
+    <div class="feedback-container">
+      <div class="container_recension" *ngFor="let feedback of feedbacks;">
+        <div>
+          <h4>{{feedback.name}}</h4>
+          <span class="font_text">Project {{feedback.project}}</span>
         </div>
-
+        <p class="font_text">{{feedback.description}}</p>
+      </div>
     </div>
-
+  </div>
 </section>

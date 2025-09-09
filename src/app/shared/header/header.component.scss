@@ -63,34 +63,16 @@ header {
     color: #02F4BF;
   }
 
-
-  @media (max-width: 320px) {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-
-    >div:first-child {
-      gap: 8px;
-
-      >img {
-        width: 60px;
-        height: auto;
-      }
-
-      >a {
-        font-size: 14px;
-      }
-    }
-
-    >div:last-child {
-      margin-top: 5px;
-
-      >p {
-        font-size: 12px;
-      }
-    }
+@media (max-width : 600px) {
+  .font {
+    display: none;
   }
 
+  .menu_icon {
+    display: flex !important;
+    padding-right: 20px;
+  }
+}
 
   @media (min-width: 321px) and (max-width: 770px) {
     padding: 0 15px;

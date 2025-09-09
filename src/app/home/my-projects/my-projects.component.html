@@ -1,20 +1,26 @@
 <section>
     <h2>My Projects</h2>
     <div *ngFor="let project of projects; let i = index" class="project" [ngClass]="{ 'reverse': i % 2 !== 0 }">
-        <img [src]="project.image" [alt]="project.title">
-        <div>
-            <div class="subheader">
-                <h4>{{project.title}}</h4>
-                <span>{{project.technologies}}</span>
+
+            <img [src]="project.image" [alt]="project.title">
+        <div class="content_projects">
+
+            <div class="content">
+                <div class="subheader">
+                    <h4>{{project.title}}</h4>
+                    <span>{{project.technologies}}</span>
+                </div>
+                <div>
+                    <span>{{project.description}}</span>
+                </div>
             </div>
-
-            <div style="display: grid;">
-                <span>{{project.description}} </span>
-
-
-            </div>
+             <div class="buttons">
+            <a class="button_git" href="{{project.github}}" target="_blank">GitHub</a>
+            <a class="button_green" href="{{project.live}}" target="_blank">Live Test</a>
         </div>
-        <div class="buttons">
+       
+        </div>
+        <div class="button_responsive" style="display: none;">
             <a class="button_git" href="{{project.github}}" target="_blank">GitHub</a>
             <a class="button_green" href="{{project.live}}" target="_blank">Live Test</a>
         </div>
