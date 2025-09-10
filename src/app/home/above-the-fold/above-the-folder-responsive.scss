@@ -1,103 +1,90 @@
+@media (max-width: 1300px) {
+
+  .content {
+    gap: 100px;
+
+  }
+}
 
 
-@media (max-width: 1354px) {
+@media (max-width: 1300px) {
+
+
+  .content {
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px;
+    padding-right: 0; 
+  }
+
+  .hero {
+    order: -1; 
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  h2 {
+    padding: 0;
+  }
   .headers {
-    top: 350px;
-    left: 30px;
-    width: 90%;
+    text-align: center; 
+    margin-top: 0;
+    width: auto;
   }
 
-}
-
-@media (max-width: 770px) {
-  .font {
-    font-size: 36px;
+  .button_above {
+    display: none;
   }
 
-  .name {
-    font-size: 60px;
-    width: 100%;
-  }
-
-  button {
-    width: 140px;
-    height: 44px;
-    top: 90px;
-    left: 30px;
-  }
-
-  .headers {
-    top: 250px;
-    left: 20px;
-    width: 90%;
-  }
 
   .arrow_down {
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-  }
-
-  .hero_shot {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding-left: 0;
-    width: 300px;
-    margin: 20px auto 0 auto;
+    display: none;
   }
 }
 
-@media (max-width: 480px) {
-  .font {
-    font-size: 28px;
-  }
 
-  .name {
-    font-size: 44px;
+@media (max-width: 600px) {
+  section {
+    min-height: 0;
+    height: auto;
   }
+.job {
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 120%;
+letter-spacing: 0%;
 
-  button {
-    width: 120px;
-    height: 36px;
-    top: 70px;
-    left: 20px;
-  }
-
-  .arrow_down {
-    top: 150px;
-    width: 18px;
-    height: 40px;
-  }
-
-  .hero_shot {
-    width: 220px;
-  }
 }
 
-@media (max-width: 320px) {
-  .font {
-    font-size: 24px;
-  }
+.name {
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+line-height: 120%;
+letter-spacing: 0%;
 
-  .name {
-    font-size: 36px;
-  }
+}
 
-  button {
-    width: 100px;
-    height: 32px;
-    top: 60px;
-    left: 10px;
-  }
+.hero_shot {
+  width: 318px;
+height: 300px;
 
-  .arrow_down {
-    top: 120px;
-    width: 16px;
-    height: 36px;
-  }
 
-  .hero_shot {
-    width: 180px;
-  }
+}
+
+}
+
+@media (max-width: 350px) {
+
+
+.hero_shot {
+  width: 288px;
+height: 270px;
+
+
+}
+
 }

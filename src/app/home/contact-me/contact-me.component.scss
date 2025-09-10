@@ -28,14 +28,11 @@ section {
 }
 
 .firstcontainer {
-   
     padding-left: 132px;
 
     >div {
         @include flex-between;
-        align-items: center;
         gap: 50px;
-        margin-bottom: 20px;
 
     }
 }
@@ -95,13 +92,12 @@ section {
 
 .text_contact {
     width: 504px;
-    height: 73px;
-
+    margin-top: 10px;
 }
 
 .arrow_down {
-      margin-left: auto;   /* schiebt es nach rechts */
-  margin-right: 200px;
+    margin-left: auto;
+    margin-right: 200px;
     width: 22px;
     height: 50px;
     background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
@@ -151,6 +147,7 @@ section {
         width: 637px;
         height: 144px;
         background: transparent;
+        padding-right: 30px;
 
         &::placeholder {
             color: #02F4BF;
@@ -168,10 +165,15 @@ section {
     font-family: 'RobotMonoMedium';
     color: #02F4BF;
 
-    width: 1185px;
+    width: auto;
     height: 74px;
     margin-top: 50px;
-    padding-left: 130.5px;
+
+    >div {
+        display: flex;
+        justify-content: end;
+        padding-right: 150px;
+    }
 
     >label {
         >input {
@@ -203,7 +205,7 @@ button {
     height: 52px;
     font-family: 'RobotMonoMedium';
     color: #827B7B;
-    margin-left: 1081px;
+    display: flex;
     gap: 10px;
     border-width: 1px;
     padding-top: 15px;
@@ -212,9 +214,7 @@ button {
     padding-left: 30px;
     background-color: transparent;
     border: 1px solid #827B7B;
-    width: 104px;
     font-weight: 500;
-    font-style: Medium;
     font-size: 18px;
     line-height: 120%;
     letter-spacing: 0%;

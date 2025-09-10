@@ -18,17 +18,15 @@ h2 {
 }
 
 .button_above {
-    display: inline-flex;
+    position: relative;  
+  top: 150px;  
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 10;
     width: 169px;
     height: 52px;
-    margin-top: 157px;
     margin-left: 50px;
     transform: rotate(270deg);
-    opacity: 1;
     gap: 10px;
     font-family: 'RobotMonoMedium';
     font-weight: 500;
@@ -52,30 +50,27 @@ section {
     background-color: #0b042d;
     height: 556px;
     min-height: 100vh;
-
-
     >div {
-        width: 1284px;
-        height: 554px;
-        position: absolute;
-        top: 2px;
-        left: -53px;
-        opacity: 1;
+    background-color: #0b042d;
 
     }
 
+}
+
+.content {
+  display: flex;
+    gap: 250px;
+      padding-right: 30px;
 
 }
 
 .headers {
-    position: relative;
-    width: 808px;
     height: 142px;
-    top: 472px;
-    left: 50px;
+    margin-top: 370px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+  white-space: nowrap; 
 
 }
 
@@ -114,10 +109,20 @@ section {
 
 }
 
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; // damit Hero-Shot rechts bleibt
+  padding-right: 30px;  
+ }
+
+
 .hero_shot {
-    height: 554px;
-    width: 539px;
-    padding-left: 886px;
-    padding-right: 30px;
-    margin-bottom: 100px;
-}
+ width: 100%;         // Breite nimmt den verfügbaren Platz ein
+  max-width: 539px;
+  max-height: 554px;
+  height: 100%;
+
+      
+ }

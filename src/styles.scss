@@ -73,3 +73,12 @@ letter-spacing: 0%;
 #contact {
   scroll-margin-top: 80px;
 }
+
+@media (max-width: 600px) {
+  #why_me,
+  #skills,
+  #projects,
+  #contact {
+    scroll-margin-top: 480px;
+  }
+}

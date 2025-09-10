@@ -130,6 +130,14 @@ border-width: 3px;
     }
 }
 
+
+@media (max-width: 600px) {
+    .picture_why_me {
+        display: none;
+    }
+}
+
+
 @media (max-width: 500px) {
     .picture_why_me {
         display: none;

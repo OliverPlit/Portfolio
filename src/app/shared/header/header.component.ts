@@ -1,18 +1,28 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss',
+  './header-responsive.scss']
 })
 
 export class HeaderComponent {
-  @Output() scrollToSection = new EventEmitter<string>();
-  goTo(section: string) {
-    this.scrollToSection.emit(section);
-  }
+    isMenuOpen = false;
+
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+
+
+    closeMenu() {
+      if (this.isMenuOpen) {
+         this.isMenuOpen = false
+      }
+       
+    }
 }
 
