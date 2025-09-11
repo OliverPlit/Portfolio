@@ -15,44 +15,47 @@
 
         .text_contact {
             width: 100%;
-            max-width: calc(100% - 40px); 
+            max-width: calc(100% - 40px);
             box-sizing: border-box;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .inputs {
-            order: 1;
-            justify-content: center;
-            width: 100%;
-            max-width: calc(100% - 40px);
-            box-sizing: border-box;
+        form {
+            .inputs {
+                order: 1;
+                align-items: center;
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                max-width: calc(100% - 40px);
+                box-sizing: border-box;
 
-            >div {
-                >input {
-                    width: 100%;
-                    max-width: 507px;
-                    box-sizing: border-box;
+                >div {
+                    >input {
+                        width: auto;
+                        max-width: 507px;
+                        box-sizing: border-box;
+                    }
+                }
+
+                >textarea {
+                    width: 475px;
                 }
             }
 
-            >textarea {
-                width: 475px;
-            }
-        }
-
-        .last_section {
-            order: 2;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
-            >div {
-                margin-top: 30px;
+            .last_section {
+                order: 2;
                 display: flex;
-                justify-content: center;
-                padding-right: 0;
-                margin-bottom: 20px;
+                flex-direction: column;
+
+                >div {
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: center;
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
 
@@ -69,7 +72,6 @@
     .arrow_down {
         display: none;
     }
-
 }
 
 @media (max-width: 700px) {

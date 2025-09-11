@@ -1,58 +1,64 @@
 <section>
-    <div class="firstcontainer">
+  <div class="firstcontainer">
 
-        <div>
-            <h2>Contact me</h2>
-            <img class="arrow_top" src="../../assets/arrows/arrow_contact.png" alt="">
-        </div>
-
-        <div>
-            <div class="text_contact">
-                <span class="font">Encourage people to contact you and describe what role you are interested in. Express
-                    interest in
-                    contributing to a new project.</span>
-            </div>
-
-            <div class="div_contact">
-                <div class="contact_sections email">
-                    <div class="icon"></div>
-                    <p class="font">
-                        <span class="label_email">Email:</span> oliverplit2005gmail.com
-                    </p>
-                </div>
-                <div class="contact_sections phone">
-                    <div class="icon"></div>
-                    <p class="font">
-                        <span class="label_email">Tel:</span> +49 1575 4343 52452
-                    </p>
-                </div>
-            </div>
-        </div>
-        <a href="#header">
-            <div class="arrow_down"></div>
-        </a>
-        <div class="inputs">
-            <div>
-                <input name="Your Name" type="text" placeholder="Your Name">
-                <input name="Your Email" type="text" placeholder="Your Email">
-            </div>
-            <textarea name="Your Message" id="" placeholder="Your Message"></textarea>
-        </div>
-        <div class="last_section">
-            <label>
-                <input type="checkbox" />
-                I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
-            </label>
-            <div>
-                <button>Send</button>
-
-            </div>
-            <div class="responsive_arrow" style="display: none;">
-                <img src="../../../assets/arrows/arrow_up.png" alt="">
-            </div>
-        </div>
+    <div>
+      <h2>{{ t('HEADER') }}</h2>
+      <img class="arrow_top" src="../../assets/arrows/arrow_contact.png" alt="">
     </div>
 
+    <div>
+      <div class="text_contact">
+        <span class="font">{{ t('DESCRIPTION') }}</span>
+      </div>
 
+      <div class="div_contact">
+        <div class="contact_sections email">
+          <div class="icon"></div>
+          <p class="font">
+            <span class="label_email">{{ t('EMAIL_LABEL') }}</span> oliverplit2005gmail.com
+          </p>
+        </div>
+        <div class="contact_sections phone">
+          <div class="icon"></div>
+          <p class="font">
+            <span class="label_email">{{ t('PHONE_LABEL') }}</span> +49 1575 4343 52452
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <a href="#header">
+      <div class="arrow_down"></div>
+    </a>
+
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="inputs">
+        <div>
+          <input [(ngModel)]="contactData.name" name="Your Name" type="text" placeholder="Your Name" required>
+          <input [(ngModel)]="contactData.email" name="Your Email" type="email" placeholder="Your Email" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        </div>
+        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="Your Message" id="message"
+          placeholder="Your Message" required></textarea>
+        <ng-container *ngIf="!message.valid && message.touched && !message.disabled">
+          <span>Please enter a Message</span>
+        </ng-container>
+      </div>
+
+      <div class="last_section">
+        <label [innerHTML]="t('PRIVACY_POLICY')">
+          <input type="checkbox" />
+        </label>
+
+        <div>
+          <button>{{ t('SEND_BUTTON') }}</button>
+        </div>
+
+        <div class="responsive_arrow" style="display: none;">
+          <img src="../../../assets/arrows/arrow_up.png" alt="">
+        </div>
+      </div>
+    </form>
+
+  </div>
 </section>
