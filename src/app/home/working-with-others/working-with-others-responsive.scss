@@ -7,6 +7,7 @@
 
   section {
     padding-left: 0px;
+    padding-bottom: 30px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -49,10 +50,11 @@
     background: transparent;
   }
 
- .header {
-      padding-left: 20px;
+  .header {
+    padding-left: 20px;
 
-    }
+  }
+
   .container_recension {
     width: 297px;
     height: 316px;
@@ -63,22 +65,19 @@
 
     >div {
       display: flex;
-      justify-content: center;
+      align-items: center;
       flex-direction: column;
       margin-top: 40px;
       margin-bottom: 40px;
     }
 
-   
+
   }
 
 
   /* Mobile Anpassungen unter 500px */
   @media (max-width: 500px) {
 
-    .feedback-wrapper {
-      padding: 20px
-    }
 
     .breackable {
       font-weight: 400;
@@ -90,8 +89,7 @@
     }
 
     .container_recension {
-      width: 227px;
-      padding: 10px
+      padding: 20px
     }
 
     span {
@@ -113,13 +111,7 @@
 
     }
   }
-}
 
-
-
-
-
-@media (max-width: 500px) {
   span {
     font-weight: 400;
     font-size: 16px;
@@ -135,6 +127,11 @@
     font-size: 24px;
     line-height: 120%;
     letter-spacing: 0%;
+
+  }
+
+  .header {
+    padding-left: 0px;
 
   }
 }

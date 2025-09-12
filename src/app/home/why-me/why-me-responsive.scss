@@ -33,6 +33,9 @@
 
 
 @media (max-width: 820px) {
+    .picture_why_me {
+        display: none;
+    }
 
     section {
         >div {
@@ -47,14 +50,14 @@
     .arrow_responsive {
         display: block !important;
         width: 23px;
-height: 41px;
+        height: 41px;
 
-border-width: 3px;
+        border-width: 3px;
 
     }
 
-    
-     .arrow_responsive_div {
+
+    .arrow_responsive_div {
         display: flex !important;
         justify-content: end !important;
     }
@@ -131,35 +134,29 @@ border-width: 3px;
 }
 
 
-@media (max-width: 600px) {
-    .picture_why_me {
-        display: none;
-    }
-}
-
-
 @media (max-width: 500px) {
     .picture_why_me {
         display: none;
     }
 
-   h2 {
-font-weight: 700;
-font-style: Bold;
-font-size: 32px !important;
-line-height: 120%;
-letter-spacing: 0%;
-text-align: right;
+    h2 {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 32px !important;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: right;
 
-   }
+    }
 
 
-   .button_green {
-      padding-top: 10px;
-    padding-right: 15px;
-    padding-bottom:10px;
-    padding-left: 15px;
-}
+    .button_green {
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+    }
+
     .located_in {
         >h3 {
             font-weight: 700;

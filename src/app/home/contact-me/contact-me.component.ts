@@ -17,6 +17,9 @@ import { LanguageService } from '../../language.service';
 export class ContactMeComponent {
   http = inject(HttpClient);
 
+
+
+  
   contactData = {
     name: "",
     email: "",
@@ -41,19 +44,21 @@ export class ContactMeComponent {
   translations = {
     de: {
       HEADER: 'Kontaktiere mich',
-      DESCRIPTION: 'Ermutige Leute, dich zu kontaktieren und beschreibe, welche Rolle dich interessiert. Zeige Interesse an der Mitarbeit an neuen Projekten.',
+      DESCRIPTION: 'Als Frontend Entwickler bin ich immer auf der Suche nach neuen Herausforderungen und Projekten, bei denen ich mein Wissen einbringen kann. Ich freue mich auf deine Nachricht und darauf, gemeinsam etwas Großartiges zu schaffen.',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
-      PRIVACY_POLICY: 'Ich habe die <a href="">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.',
-      SEND_BUTTON: 'Senden'
+  PRIVACY_POLICY_CONTACT_PART1: 'Ich habe die ',
+    PRIVACY_POLICY_CONTACT_LINK: 'Datenschutzbestimmungen',
+    PRIVACY_POLICY_CONTACT_PART2: ' gelesen und stimme der Verarbeitung meiner Daten zu.',      SEND_BUTTON: 'Senden'
     },
     en: {
       HEADER: 'Contact me',
-      DESCRIPTION: 'Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.',
+      DESCRIPTION: 'As Frontend Developer, I am always looking for new challenges and projects where I can contribute my knowledge. I look forward to hearing from you and creating something great together.',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
-      PRIVACY_POLICY: 'I\'ve read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.',
-      SEND_BUTTON: 'Send'
+   PRIVACY_POLICY_CONTACT_PART1: 'I\'ve read the ',
+    PRIVACY_POLICY_CONTACT_LINK: 'privacy policy',
+    PRIVACY_POLICY_CONTACT_PART2: ' and agree to the processing of my data as outlined.',      SEND_BUTTON: 'Send'
     }
   };
 

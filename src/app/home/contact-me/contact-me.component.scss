@@ -144,7 +144,9 @@ section {
         border: 1.5px solid;
         border-color: #02F4BF;
         font-family: 'RobotMonoMedium';
-        width: 637px;
+       max-width: 637px;
+       padding-right: 20px;
+        width: 100%;
         height: 144px;
         background: transparent;
         padding-right: 30px;
@@ -171,8 +173,9 @@ section {
 
     >div {
         display: flex;
+        width: 100%;
+        max-width: 1200px;
         justify-content: end;
-        padding-right: 150px;
     }
 
     >label {

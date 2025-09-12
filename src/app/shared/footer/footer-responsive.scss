@@ -6,24 +6,25 @@
             align-items: center;
         }
 
-          .icons_footer {
-    order: 1;
-  }
+        .icons_footer {
+            order: 1;
+        }
 
-  .second_container {
-    order: 3;
-  }
+        .second_container {
+            order: 3;
+        }
     }
 
     .second_container {
         div {
-        flex-direction: column;
-        align-items: center;
-gap: 0;
-margin-top: 30px;
->a {
-    margin-top: 10px;
-}
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            margin-top: 30px;
+
+            >a {
+                margin-top: 10px;
+            }
         }
     }
 
@@ -31,7 +32,8 @@ margin-top: 30px;
         margin-top: 40px;
         order: 2;
         background-image: url('../../../assets/logos/logo.png');
-         background-repeat: no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
+        padding: 0;
     }
 }

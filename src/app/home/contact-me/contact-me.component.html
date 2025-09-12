@@ -46,9 +46,16 @@
       </div>
 
       <div class="last_section">
-        <label [innerHTML]="t('PRIVACY_POLICY')">
-          <input type="checkbox" />
-        </label>
+    <label>
+  <input type="checkbox" required>
+  <span>
+    {{ t('PRIVACY_POLICY_CONTACT_PART1') }}
+    <a routerLink="/privacy-policy">{{ t('PRIVACY_POLICY_CONTACT_LINK') }}</a>
+    {{ t('PRIVACY_POLICY_CONTACT_PART2') }}
+  </span>
+</label>
+
+
 
         <div>
           <button>{{ t('SEND_BUTTON') }}</button>

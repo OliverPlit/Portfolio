@@ -33,7 +33,6 @@
 
                 >div {
                     >input {
-                        width: auto;
                         max-width: 507px;
                         box-sizing: border-box;
                     }
@@ -50,8 +49,9 @@
                 flex-direction: column;
 
                 >div {
-                    margin-top: 30px;
+                    margin-top: 20px;
                     display: flex;
+                    height: auto;
                     justify-content: center;
                     padding-right: 0;
                     margin-bottom: 20px;
@@ -61,6 +61,7 @@
 
         .div_contact {
             order: 3;
+            margin-top: 120px;
         }
 
         >div {
@@ -102,6 +103,10 @@
     .responsive_arrow {
         display: flex !important;
         justify-content: end !important;
+        >img {
+        padding-left: 30px;
+
+        }
     }
 
     span {
@@ -120,7 +125,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     h2 {
         font-weight: 700;
         font-style: Bold;
@@ -129,4 +134,21 @@
         letter-spacing: 0%;
 
     }
+
+    form {
+        .inputs {
+
+
+            >div {
+                >input {
+                    width: auto;
+                    box-sizing: border-box;
+                }
+            }
+
+        }
+
+
+    }
+
 }
