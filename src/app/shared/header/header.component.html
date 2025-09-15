@@ -1,7 +1,7 @@
 <header>
   <div>
     <a href="">
-      <img src="../../../assets/logos/logo.png" alt="logo">
+      <img class="logo" src="../../../assets/logos/fertig_logo.png" alt="logo">
     </a>
 
     <a href="#why_me" class="font">{{ t('NAV_WHY_ME') }}</a>
@@ -26,6 +26,12 @@
       <a href="#skills" class="font_responsive">{{ t('NAV_SKILLS') }}</a>
       <a href="#projects" class="font_responsive">{{ t('NAV_PROJECTS') }}</a>
       <a href="#contact" class="font_responsive">{{ t('NAV_CONTACT') }}</a>
+      <div>
+        <p class="font_responsive">
+      <span (click)="switchLang('de')">DE</span> | 
+      <span (click)="switchLang('en')">EN</span>
+    </p>
+      </div>
     </div>
   </div>
 </header>

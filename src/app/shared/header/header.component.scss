@@ -12,8 +12,8 @@ header {
   align-items: center;
   justify-content: space-between;
   scroll-behavior: smooth;
-background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%);
-  padding: 0 100px; 
+  background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%);
+  padding: 0 100px;
 
   >div:first-child {
     display: flex;
@@ -63,19 +63,20 @@ background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%)
     color: #02F4BF;
   }
 
-@media (max-width : 600px) {
-  .font {
-    display: none;
+  @media (max-width: 700px) {
+    .font {
+      display: none;
+    }
+
+    .menu_icon {
+      display: flex !important;
+      padding-right: 20px;
+    }
   }
 
-  .menu_icon {
-    display: flex !important;
-    padding-right: 20px;
-  }
-}
+  @media (min-width: 421px) and (max-width: 889px) {
+      padding: 0 15px;
 
-  @media (min-width: 321px) and (max-width: 770px) {
-    padding: 0 15px;
 
     >div:first-child {
       gap: 24px;
@@ -97,9 +98,9 @@ background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%)
     }
   }
 
+  @media (min-width: 889px) and (max-width: 1160px) {
+      padding: 0 50px;
 
-  @media (min-width: 771px) and (max-width: 1024px) {
-    padding: 0 50px;
 
     >div:first-child {
       gap: 36px;
@@ -120,5 +121,4 @@ background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%)
       }
     }
   }
-
 }

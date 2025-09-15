@@ -12,13 +12,13 @@
 
   .content {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 30px;
-    padding-right: 0; 
+    padding-right: 0;
   }
 
   .hero {
-    order: -1; 
+    order: -1;
     width: auto;
     display: flex;
     justify-content: center;
@@ -28,8 +28,9 @@
   h2 {
     padding: 0;
   }
+
   .headers {
-    text-align: center; 
+    text-align: center;
     margin-top: 0;
     width: auto;
   }
@@ -45,46 +46,47 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   section {
     min-height: 0;
     height: auto;
   }
-.job {
-font-weight: 700;
-font-style: Bold;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0%;
 
-}
+  .job {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
 
-.name {
-font-weight: 700;
-font-style: Bold;
-font-size: 40px;
-line-height: 120%;
-letter-spacing: 0%;
+  }
 
-}
+  .name {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0%;
 
-.hero_shot {
-  width: 318px;
-height: 300px;
+  }
+
+  .hero_shot {
+    width: 318px;
+    height: 300px;
 
 
-}
+  }
 
 }
 
 @media (max-width: 350px) {
 
 
-.hero_shot {
-  width: 288px;
-height: 270px;
+  .hero_shot {
+    width: 288px;
+    height: 270px;
 
 
-}
+  }
 
 }

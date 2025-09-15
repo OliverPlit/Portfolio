@@ -1,68 +1,72 @@
 * {
-    margin: 0;
+  margin: 0;
 
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 @font-face {
-    font-family: 'RobotMonoMedium';
-    src: url('/assets/fonts/Roboto_Mono/static/RobotoMono-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'RobotMonoMedium';
+  src: url('/assets/fonts/Roboto_Mono/static/RobotoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'MyFont';
-    src: url('/assets/fonts/MyFont-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'MyFont';
+  src: url('/assets/fonts/MyFont-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
 
 h1 {
-    font-family: 'RobotMonoMedium';
-    color: #E15544;
-    font-weight: 500;
-    font-size: 54px;
-    line-height: 120%;
-    letter-spacing: 0%;
+  font-family: 'RobotMonoMedium';
+  color: #E15544;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 120%;
+  letter-spacing: 0%;
 
 }
 
 h2 {
-    font-family: 'RobotMonoMedium';
-    color: #E15544;
-    font-size: 54px;
-font-weight: 500;
-font-style: Medium;
-font-size: 54px;
-line-height: 120%;
-letter-spacing: 0%;
+  font-family: 'RobotMonoMedium';
+  color: #E15544;
+  font-size: 54px;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 54px;
+  line-height: 120%;
+  letter-spacing: 0%;
 
 
 }
 
 
+
+
 .button_green {
 
-    text-decoration: none;
-    opacity: 1;
-    gap: 10px;
-    font-size: 18px;
-    color: #0B042D;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    background-color: #02F4BF;
-    border: none;
-    font-family: 'RobotMonoMedium';
-    transition: color 0.6s ease;
+  text-decoration: none;
+  opacity: 1;
+  gap: 10px;
+  font-size: 18px;
+  color: #0B042D;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  background-color: #02F4BF;
+  border: none;
+  font-family: 'RobotMonoMedium';
+  transition: color 0.6s ease;
 
-    &:hover {
-        color: #E15544;
-    }
+  &:hover {
+    color: #E15544;
+  }
 
 }
 
@@ -74,7 +78,20 @@ letter-spacing: 0%;
   scroll-margin-top: 80px;
 }
 
+@media (max-width: 800px) {
+  .breakable {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    padding-right: 20px;
+
+  }
+}
+
+
 @media (max-width: 600px) {
+
   #why_me,
   #skills,
   #projects,

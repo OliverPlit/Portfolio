@@ -15,7 +15,7 @@ export class WhyMeComponent {
   translations = {
     de: {
       TITLE: 'Über mich',
-      DESCRIPTION: '"Ich liebe es zu programmieren, weil ich damit greifbare Ergebnisse erschaffe, die echten Mehrwert bieten. Es motiviert mich, Prozesse zu optimieren, Abläufe zu automatisieren und dabei die Freude am technischen Detail nicht zu verlieren.',
+      DESCRIPTION: 'Ich liebe es zu programmieren, weil ich damit greifbare Ergebnisse erschaffe, die echten Mehrwert bieten. Es motiviert mich, Prozesse zu optimieren, Abläufe zu automatisieren und dabei die Freude am technischen Detail nicht zu verlieren.',
       I_AM: 'Ich bin',
       LOCATED_IN: 'befindet sich in',
       OPEN_TO_RELOCATE: 'bereit umzuziehen',
@@ -24,7 +24,7 @@ export class WhyMeComponent {
     },
     en: {
       TITLE: 'Why me',
-      DESCRIPTION: '"I love programming because it allows me to create tangible results that offer real added value. It motivates me to optimize processes and automate procedures, while maintaining a love of technical detail.',
+      DESCRIPTION: 'I love programming because it allows me to create tangible results that offer real added value. It motivates me to optimize processes and automate procedures, while maintaining a love of technical detail.',
       I_AM: 'I am',
       LOCATED_IN: 'located in',
       OPEN_TO_RELOCATE: 'open to relocate',

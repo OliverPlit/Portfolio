@@ -97,7 +97,7 @@ section {
 
 .arrow_down {
     margin-left: auto;
-    margin-right: 200px;
+    margin-right: 160px;
     width: 22px;
     height: 50px;
     background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
@@ -114,7 +114,10 @@ section {
     }
 }
 
-
+.arrow_down_responsive {
+    display: flex;
+    justify-content: end;
+}
 .inputs {
     display: flex;
     gap: 40px;
@@ -127,11 +130,18 @@ section {
         flex-direction: column;
         gap: 40px;
 
-        >input  {
+        >input {
             @include input_style();
+            padding-left: 20px;
 
             &:hover {
                 cursor: pointer;
+            }
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
             }
 
         }
@@ -139,23 +149,23 @@ section {
     }
 
 
-    >textarea  {
+    >textarea {
         color: #02F4BF;
         border: 1.5px solid;
         border-color: #02F4BF;
         font-family: 'RobotMonoMedium';
-       max-width: 637px;
-       padding-right: 20px;
+        max-width: 637px;
+        padding-left: 20px;
+        padding-top: 10px;
         width: 100%;
         height: 144px;
         background: transparent;
-        padding-right: 30px;
 
-        &::placeholder {
-            color: #02F4BF;
-            font-family: 'RobotMonoMedium';
-
-        }
+     &::placeholder {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+            }
 
         &:hover {
             cursor: pointer;
@@ -174,7 +184,7 @@ section {
     >div {
         display: flex;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1235px;
         justify-content: end;
     }
 
@@ -203,7 +213,7 @@ a {
     }
 }
 
-button  {
+button {
     width: 104px;
     height: 52px;
     font-family: 'RobotMonoMedium';

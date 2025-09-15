@@ -28,29 +28,84 @@
         }
     }
 
-    .img-hover-text::after {
-        content: none;
-    }
+    .img-hover-text .hover-text {
+    display: none; 
+  }
 
-    .always-visible-text {
-        display: block !important;
-        margin-top: 20px;
-        color: #02F4BF;
-        font-family: 'RobotMonoMedium';
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 120%;
-        text-align: center;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .always-visible-text {
+    display: block !important;
+    margin-top: 20px;
+    color: #02F4BF;
+    font-family: 'RobotMonoMedium';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .button_bottom {
-        display: flex !important;
-        justify-content: center;
-    }
+  .button_bottom {
+    display: flex !important;
+    justify-content: center;
+  }
 }
+
+
+@media (max-width: 700px) {
+  img[alt="Angular"] {
+    content: url("../../../assets/logos/responsive/Angular_mobile.png");
+  }
+
+  img[alt="TypeScript"] {
+    content: url("../../../assets/logos/responsive/TypeScript_mobile.png");
+  }
+
+  img[alt="JavaScript"] {
+    content: url("../../../assets/logos/responsive/JavaScript_mobile.png");
+  }
+
+  img[alt="HTML"] {
+    content: url("../../../assets/logos/responsive/HTML_mobile.png");
+  }
+
+  img[alt="CSS"] {
+    content: url("../../../assets/logos/responsive/CSS_mobile.png");
+  }
+
+  img[alt="API"] {
+    content: url("../../../assets/logos/responsive/API_mobile.png");
+  }
+
+  img[alt="Firebase"] {
+    content: url("../../../assets/logos/responsive/Firebase_mobile.png");
+  }
+
+  img[alt="Git"] {
+    content: url("../../../assets/logos/responsive/Git_mobile.png");
+  }
+
+  img[alt="Scrum"] {
+    content: url("../../../assets/logos/responsive/Scrum_mobile.png");
+  }
+
+  img[alt="MaterialDesign"] {
+    content: url("../../../assets/logos/responsive/Material_Design_mobile.png");
+  }
+
+  img[alt="Challenge"] {
+    content: url("../../../assets/logos/responsive/Challenge\ me\ icon\ +arrow.png");
+  }
+
+  .challenge {
+    max-width: none;   
+  width: 150px;      
+  height: auto;  
+  }
+}
+
+
 
 @media (max-width: 500px) {
     h2 {
@@ -65,10 +120,7 @@
     section {
         >div {
             grid-template-columns: repeat(auto-fit, minmax(75px, auto));
-
             gap: 0;
-
-
         }
 
 
@@ -78,7 +130,7 @@
     img {
         max-width: 40px;
         height: 45px;
-
+margin-bottom: 20px;
         width: 100%;
         height: auto;
         display: block;

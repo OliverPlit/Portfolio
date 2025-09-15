@@ -14,15 +14,19 @@ import { LanguageService } from '../../language.service';
 export class MySkillsComponent {
   lang: 'de' | 'en' = 'en';
 
-  translations = {
-    de: {
-      TITLE: 'Meine Fähigkeiten',
-    
-    },
-    en: {
-      TITLE: 'My Skills',
-    }
-  };
+translations = {
+  de: {
+    TITLE: 'Meine Fähigkeiten',
+    HOVER_TEXT: 'Ich lerne immer gerne neue Technologien – sag mir einfach, was du brauchst.',
+    RESPONSIVE_TEXT: 'Ich lerne immer gerne neue Technologien.'
+  },
+  en: {
+    TITLE: 'My Skills',
+    HOVER_TEXT: 'I am always happy to learn new technologies, just tell me what you need.',
+    RESPONSIVE_TEXT: 'I am always happy to learn new technologies.'
+  }
+};
+
 
   constructor(private langService: LanguageService) {
     this.langService.lang$.subscribe(l => this.lang = l);

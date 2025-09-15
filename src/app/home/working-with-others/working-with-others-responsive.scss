@@ -1,6 +1,12 @@
 @media (max-width: 1300px) {
   .breakable {
     display: block;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+
   }
 
 
@@ -127,11 +133,6 @@
     font-size: 24px;
     line-height: 120%;
     letter-spacing: 0%;
-
-  }
-
-  .header {
-    padding-left: 0px;
 
   }
 }

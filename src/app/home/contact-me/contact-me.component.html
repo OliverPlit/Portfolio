@@ -26,10 +26,12 @@
         </div>
       </div>
     </div>
-
-    <a href="#header">
+<div class="arrow_down_responsive">
+ <a href="#header">
       <div class="arrow_down"></div>
     </a>
+</div>
+   
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="inputs">
@@ -40,9 +42,7 @@
         </div>
         <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="Your Message" id="message"
           placeholder="Your Message" required></textarea>
-        <ng-container *ngIf="!message.valid && message.touched && !message.disabled">
-          <span>Please enter a Message</span>
-        </ng-container>
+      
       </div>
 
       <div class="last_section">

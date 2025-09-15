@@ -1,30 +1,34 @@
 <section>
+  <div class="header">
     <h2>{{ t('TITLE') }}</h2>
-    <div>
-        <img src="../../assets/logos/Angular.png" alt="">
-        <img src="../../assets/logos/TypeScript.png" alt="">
-        <img src="../../assets/logos/JavaScript.png" alt="">
-        <img src="../../assets/logos/HTML.png" alt="">
-        <img src="../../assets/logos/CSS.png" alt="">
-        <img src="../../assets/logos/API.png" alt="">
-        <img src="../../assets/logos/Firebase_small.png" alt="">
-        <img src="../../assets/logos/Git.png" alt="">
-        <img src="../../assets/logos/Scrum.png" alt="">
-        <img class="material_design" src="../../assets/logos/Materialdesign.png" alt="">
-       
-        <div class="img-hover-text">
-            <img src="../../assets/logos/Challenge.png" alt="Challenge">
 
-        </div>
+  </div>
+    <div>
+       <img src="../../assets/logos/Angular.png" alt="Angular">
+        <img src="../../assets/logos/TypeScript.png" alt="TypeScript">
+        <img src="../../assets/logos/JavaScript.png" alt="JavaScript">
+        <img src="../../assets/logos/HTML.png" alt="HTML">
+        <img src="../../assets/logos/CSS.png" alt="CSS">
+        <img src="../../assets/logos/API.png" alt="API">
+        <img src="../../assets/logos/Firebase_small.png" alt="Firebase">
+        <img src="../../assets/logos/Git.png" alt="Git">
+        <img src="../../assets/logos/Scrum.png" alt="Scrum">
+        <img class="material_design" src="../../assets/logos/Materialdesign.png" alt="MaterialDesign">
+
+        
+        <div class="img-hover-text">
+      <img src="../../assets/logos/Challenge.png" alt="Challenge" class="challenge">
+      <span class="hover-text">{{ t('HOVER_TEXT') }}</span>
+    </div>
 
     </div>
     <div class="arrow_responsive">
         <img src="../../../assets/arrows/arrow_responsive_down.png" alt="" style="display: none;">
 
     </div>
-    <div class="always-visible-text" style="display: none;">
-        I am always happy to learn new technologies, just tell me what you need.
-    </div>
+      <div class="always-visible-text" style="display: none;">
+    {{ t('RESPONSIVE_TEXT') }}
+  </div>
      <div class="button_bottom" style="display: none;">
                     <a href="#contact" class="button_green">Let´s talk</a>
                 </div>

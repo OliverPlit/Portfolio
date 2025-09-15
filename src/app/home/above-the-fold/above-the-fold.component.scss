@@ -18,32 +18,32 @@ h2 {
 }
 
 .button_above {
-    position: relative;  
+  position: relative;  
   top: 150px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 169px;
-    height: 52px;
-    margin-left: 50px;
-    transform: rotate(270deg);
-    gap: 10px;
-    font-family: 'RobotMonoMedium';
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 18px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    color: #E15544;
-    background: transparent;
-    border: 1px solid #02F4BF;
-    box-sizing: border-box;
-    text-decoration: none;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;   
+  min-height: 52px;      
+  min-width: 169px;      
+  margin-left: 50px;
+  transform: rotate(270deg);
+  gap: 10px;
+  font-family: 'RobotMonoMedium';
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 120%;
+  color: #E15544;
+  background: transparent;
+  border: 1px solid #02F4BF;
+  box-sizing: border-box;
+  text-decoration: none;
 
-    &:hover {
-        color: #02F4BF;
-        cursor: pointer;
-    }
+  &:hover {
+    color: #02F4BF;
+    cursor: pointer;
+  }
 }
 
 section {

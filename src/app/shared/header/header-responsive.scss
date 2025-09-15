@@ -1,10 +1,10 @@
-@media (min-width: 601px) {
+@media (min-width: 701px) {
     .mobile-menu {
         display: none !important;
     }
 }
 
-@media (max-width : 600px) {
+@media (max-width : 700px) {
     .mobile-menu {
 
         background: linear-gradient(180deg, #13074E 46.5%, rgba(29, 10, 121, 0.95) 91%);
@@ -57,3 +57,9 @@
     }
 
 }
+
+ @media  (max-width: 570px) {
+    header {
+      padding: 0 15px;
+
+    }}
