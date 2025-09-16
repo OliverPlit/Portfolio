@@ -27,6 +27,12 @@ section {
     color: #02F4BF;
 }
 
+span {
+     color: #02F4BF;
+    padding-top: 30px;
+    font-family: 'RobotMonoMedium';
+}
+
 .firstcontainer {
     padding-left: 132px;
 
@@ -114,10 +120,43 @@ section {
     }
 }
 
+
+/* Basis-Styling für die Checkbox */
+.custom_checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #E15544;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.custom_checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #E15544; /* Haken orange */
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Zusatzklasse für türkise Füllung */
+.custom_checkbox.filled {
+    background-color: #02F4BF; /* türkis */
+}
+
 .arrow_down_responsive {
     display: flex;
     justify-content: end;
 }
+
 .inputs {
     display: flex;
     gap: 40px;
@@ -144,8 +183,16 @@ section {
                 line-height: 140%;
             }
 
+            
+
         }
 
+      input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* gleiche Farbe wie dein Background */
+    -webkit-text-fill-color: #02F4BF; /* Textfarbe */
+    transition: background-color 5000s ease-in-out 0s;
+}
     }
 
 
@@ -161,17 +208,27 @@ section {
         height: 144px;
         background: transparent;
 
-     &::placeholder {
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 140%;
-            }
+        &::placeholder {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+        }
 
         &:hover {
             cursor: pointer;
         }
     }
 }
+
+
+.button_section {
+    display: flex;
+    width: 100%;
+    max-width: 1235px;
+    justify-content: end;
+
+}
+
 
 .last_section {
     font-family: 'RobotMonoMedium';
@@ -181,18 +238,7 @@ section {
     height: 74px;
     margin-top: 50px;
 
-    >div {
-        display: flex;
-        width: 100%;
-        max-width: 1235px;
-        justify-content: end;
-    }
 
-    >label {
-        >input {
-            border: 1px #02F4BF solid;
-        }
-    }
 }
 
 a {
@@ -234,4 +280,70 @@ button {
 
 
 
+}
+
+
+button {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button.active {
+    opacity: 1;
+    cursor: pointer;
+    color: #02F4BF;
+    border: #02F4BF solid;
+}
+
+.errorstyle {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+.inputs > div {
+  position: relative; 
+}
+
+.inputs > div input,
+.inputs > div textarea {
+  padding-bottom: 22px; 
+}
+
+.inputs > div .error_email {
+  position: absolute;
+  bottom: 4px;      
+  left: auto;
+  right: 50px;        
+  font-size: 12px;
+  color: red !important;
+  pointer-events: none; 
+  background: transparent;
+}
+
+.inputs > div .error_name {
+  position: absolute;
+  bottom: 100px;       /* direkt am unteren Rand des Feldes */
+  left: auto;
+  right: 50px;        /* etwas Abstand von links */
+  font-size: 12px;
+  color: red;
+  pointer-events: none; /* blockiert die Eingabe nicht */
+  background: transparent;
+}
+
+
+.inputs > textarea .error_message {
+  position: absolute;
+  bottom: 4px;      
+  left: auto;
+  right: 50px;        
+  font-size: 12px;
+  color: red !important;
+  pointer-events: none; 
+  background: transparent;
 }

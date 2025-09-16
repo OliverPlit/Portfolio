@@ -1,37 +1,30 @@
 <?php
-
 switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
+    case "OPTIONS":
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
-        case("POST"): //Send the email;
-            header("Access-Control-Allow-Origin: *");
-            // Payload is not send to $_POST Variable,
-            // is send to php:input as a text
-            $json = file_get_contents('php://input');
-            //parse the Payload from text format to Object
-            $params = json_decode($json);
-    
-            $email = $params->email;
-            $name = $params->name;
-            $message = $params->message;
-    
-            $recipient = 'oliverplit2005@gmail.com';  
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
-    
-            $headers   = array();
-            $headers[] = 'MIME-Version: 1.0';
-            $headers[] = 'Content-type: text/html; charset=utf-8';
 
-            // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+    case "POST":
+        header("Access-Control-Allow-Origin: *");
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
-            break;
-        default: //Reject any non POST or OPTIONS requests.
-            header("Allow: POST", true, 405);
-            exit;
-    } 
+        // Payload von Angular
+        $json = file_get_contents('php://input');
+        $params = json_decode($json, true); // als Array
+
+        // Alle Daten vorbereiten
+        $logData = print_r($params, true); // komplette Arrays als String
+        $logFile = __DIR__ . "/mail_test_log.txt";
+
+        // In Datei speichern
+        file_put_contents($logFile, "=== Neue Nachricht ===\n$logData\n\n", FILE_APPEND);
+
+        // Zurück an Angular senden
+        echo json_encode(["status" => "ok", "msg" => "Mail lokal gespeichert!", "data" => $params]);
+        exit;
+
+    default:
+        header("Allow: POST", true, 405);
+        exit;
+}

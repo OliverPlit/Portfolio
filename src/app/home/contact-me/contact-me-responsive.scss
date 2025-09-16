@@ -1,18 +1,15 @@
 @media (max-width: 1350px) {
-.inputs {
-    >textarea {
-        margin-right: 30px;
+    .inputs {
+        >textarea {
+            margin-right: 30px;
+        }
     }
-}
 
     .last_section {
-
-
         >div {
             >button {
-                          margin-right: 30px;
-                          margin-top: 20px;
-  
+                margin-right: 30px;
+                margin-top: 20px;
             }
         }
     }
@@ -175,10 +172,18 @@
                     box-sizing: border-box;
                 }
             }
-
         }
+    }
 
 
+    .last_section {
+        >div {
+            >button {
+                margin-right: 0px;
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+        }
     }
 
 }

@@ -3,6 +3,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../language.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact-me',
@@ -16,9 +18,15 @@ import { LanguageService } from '../../language.service';
 })
 export class ContactMeComponent {
   http = inject(HttpClient);
+  private router = inject(Router);
 
 
 
+   goTo(path: string) {
+    this.router.navigate([path]).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
   
   contactData = {
     name: "",
@@ -75,16 +83,44 @@ export class ContactMeComponent {
   }
 
   // --- E-Mail Funktion bleibt unverändert ---
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+ acceptedPrivacy = false;
+successMsg = '';
+
+touched = { name: false, email: false, message: false, privacy: false };
+
+markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
+  this.touched[field] = true;
+}
+
+onSubmit(ngForm: NgForm) {
+  // Alle Felder als touched markieren, falls Submit gedrückt wird
+  Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
+
+  if (ngForm.valid) {
+    console.log("Daten zum Senden:", this.contactData, "Privacy akzeptiert:", this.acceptedPrivacy);
+
+    if (!this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => ngForm.resetForm(),
+          next: (response) => {
+            console.log("Server Response:", response);
+            this.successMsg = 'Formular erfolgreich versendet!';
+            ngForm.resetForm();
+            this.acceptedPrivacy = false;
+            Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
+          },
           error: (error) => console.error(error),
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else {
+      this.successMsg = 'Email erfolgreich versendet!';
       ngForm.resetForm();
+      this.acceptedPrivacy = false;
+      Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
     }
+  } else {
+    this.successMsg = '';
+    console.warn('Formular ungültig!');
   }
+}
 }
