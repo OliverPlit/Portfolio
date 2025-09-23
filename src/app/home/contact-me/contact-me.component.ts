@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrls: [
     './contact-me.component.scss',
@@ -22,12 +22,12 @@ export class ContactMeComponent {
 
 
 
-   goTo(path: string) {
+  goTo(path: string) {
     this.router.navigate([path]).then(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-  
+
   contactData = {
     name: "",
     email: "",
@@ -37,7 +37,7 @@ export class ContactMeComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://oliver-plit.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -55,18 +55,29 @@ export class ContactMeComponent {
       DESCRIPTION: 'Als Frontend Entwickler bin ich immer auf der Suche nach neuen Herausforderungen und Projekten, bei denen ich mein Wissen einbringen kann. Ich freue mich auf deine Nachricht und darauf, gemeinsam etwas Großartiges zu schaffen.',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
-  PRIVACY_POLICY_CONTACT_PART1: 'Ich habe die ',
-    PRIVACY_POLICY_CONTACT_LINK: 'Datenschutzbestimmungen',
-    PRIVACY_POLICY_CONTACT_PART2: ' gelesen und stimme der Verarbeitung meiner Daten zu.',      SEND_BUTTON: 'Senden'
+      PRIVACY_POLICY_CONTACT_PART1: 'Ich habe die ',
+      PRIVACY_POLICY_CONTACT_LINK: 'Datenschutzbestimmungen',
+      PRIVACY_POLICY_CONTACT_PART2: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
+      SEND_BUTTON: 'Senden',
+      NAME_INPUT: 'Dein Name',
+      MAIL_INPUT: 'Deine Email',
+      MESSAGE_INPUT: 'Deine Nachricht',
+
+
     },
     en: {
       HEADER: 'Contact me',
       DESCRIPTION: 'As Frontend Developer, I am always looking for new challenges and projects where I can contribute my knowledge. I look forward to hearing from you and creating something great together.',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
-   PRIVACY_POLICY_CONTACT_PART1: 'I\'ve read the ',
-    PRIVACY_POLICY_CONTACT_LINK: 'privacy policy',
-    PRIVACY_POLICY_CONTACT_PART2: ' and agree to the processing of my data as outlined.',      SEND_BUTTON: 'Send'
+      PRIVACY_POLICY_CONTACT_PART1: 'I\'ve read the ',
+      PRIVACY_POLICY_CONTACT_LINK: 'privacy policy',
+      PRIVACY_POLICY_CONTACT_PART2: ' and agree to the processing of my data as outlined.',
+      SEND_BUTTON: 'Send',
+      NAME_INPUT: 'Your Name',
+      MAIL_INPUT: 'Your Email',
+      MESSAGE_INPUT: 'Your Message',
+
     }
   };
 
@@ -83,44 +94,38 @@ export class ContactMeComponent {
   }
 
   // --- E-Mail Funktion bleibt unverändert ---
- acceptedPrivacy = false;
-successMsg = '';
+  acceptedPrivacy = false;
+  successMsg = '';
 
-touched = { name: false, email: false, message: false, privacy: false };
+  touched = { name: false, email: false, message: false, privacy: false };
 
-markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
-  this.touched[field] = true;
-}
-
-onSubmit(ngForm: NgForm) {
-  // Alle Felder als touched markieren, falls Submit gedrückt wird
-  Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
-
-  if (ngForm.valid) {
-    console.log("Daten zum Senden:", this.contactData, "Privacy akzeptiert:", this.acceptedPrivacy);
-
-    if (!this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            console.log("Server Response:", response);
-            this.successMsg = 'Formular erfolgreich versendet!';
-            ngForm.resetForm();
-            this.acceptedPrivacy = false;
-            Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
-          },
-          error: (error) => console.error(error),
-          complete: () => console.info('send post complete'),
-        });
-    } else {
-      this.successMsg = 'Email erfolgreich versendet!';
-      ngForm.resetForm();
-      this.acceptedPrivacy = false;
-      Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
-    }
-  } else {
-    this.successMsg = '';
-    console.warn('Formular ungültig!');
+  markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
+    this.touched[field] = true;
   }
-}
+
+  onSubmit(ngForm: NgForm) {
+    // Alle Felder als touched markieren, falls Submit gedrückt wird
+    Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
+
+    if (ngForm.valid) {
+      console.log("Daten zum Senden:", this.contactData, "Privacy akzeptiert:", this.acceptedPrivacy);
+
+      this.http.post(this.post.endPoint, this.contactData, {
+        headers: { 'Content-Type': 'application/json' },
+        responseType: 'text'  // wenn dein PHP plain text zurückgibt
+      }).subscribe({
+        next: (response) => {
+          console.log("Server Response:", response);
+          this.successMsg = 'Formular erfolgreich versendet!';
+          ngForm.resetForm();
+          this.acceptedPrivacy = false;
+          Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
+        },
+        error: (error) => {
+          console.error(error);
+          this.successMsg = 'Fehler beim Senden der Mail!';
+        }
+      });
+    }
+  }
 }

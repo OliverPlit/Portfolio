@@ -13,7 +13,9 @@
 
       <div class="div_contact">
         <div class="contact_sections email">
-          <div class="icon"></div>
+          <a href="mailto:oliverplit2005@gmail.com">
+            <div class="icon"></div>
+          </a>
           <p class="font">
             <span class="label_email">{{ t('EMAIL_LABEL') }}</span> oliverplit2005gmail.com
           </p>
@@ -26,73 +28,73 @@
         </div>
       </div>
     </div>
-<div class="arrow_down_responsive">
- <a href="#header">
-      <div class="arrow_down"></div>
-    </a>
-</div>
    
 
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
-  <div class="inputs">
-    <div>
-      <!-- Name Input -->
-      <input [(ngModel)]="contactData.name" name="Your Name" type="text" placeholder="Your Name"
-             required minlength="3" #name="ngModel" (blur)="markTouched('name')">
-      <span class="error error_name" *ngIf="touched.name && name.invalid">
-        <span *ngIf="name.errors?.['required']">Name ist erforderlich</span>
-        <span *ngIf="name.errors?.['minlength']">Name muss mindestens 3 Zeichen haben</span>
-      </span>
 
-      <!-- Email Input -->
-      <input [(ngModel)]="contactData.email" name="Your Email" type="email" placeholder="Your Email"
-             required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
-             (blur)="markTouched('email')">
-      <span class="error error_email" *ngIf="touched.email && email.invalid">
-        <span *ngIf="email.errors?.['required']">Email ist erforderlich</span>
-        <span *ngIf="email.errors?.['pattern']">Email ist ungültig</span>
-      </span>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
+       <div class="arrow_down_responsive">
+      <a href="#header">
+        <div class="arrow_down"></div>
+      </a>
     </div>
+      <div class="inputs">
+        <div>
+          <!-- Name Input -->
+          <input [(ngModel)]="contactData.name" name="Your Name" type="text" placeholder="{{ t('NAME_INPUT') }}"
+            required minlength="3" #name="ngModel" (blur)="markTouched('name')">
+          <span class="error error_name" *ngIf="touched.name && name.invalid">
+            <span *ngIf="name.errors?.['required']">Name ist erforderlich</span>
+            <span *ngIf="name.errors?.['minlength']">Name muss mindestens 3 Zeichen haben</span>
+          </span>
 
-    <!-- Message -->
-    <textarea [(ngModel)]="contactData.message" name="Your Message" placeholder="Your Message"
-              required minlength="5" #message="ngModel" (blur)="markTouched('message')"></textarea>
-    <span class="error error_message" *ngIf="touched.message && message.invalid">
-      <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
-      <span *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen haben</span>
-    </span>
-  </div>
+          <!-- Email Input -->
+          <input [(ngModel)]="contactData.email" name="Your Email" type="email" placeholder="{{ t('MAIL_INPUT') }}"
+            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
+            (blur)="markTouched('email')">
+          <span class="error error_email" *ngIf="touched.email && email.invalid">
+            <span *ngIf="email.errors?.['required']">Email ist erforderlich</span>
+            <span *ngIf="email.errors?.['pattern']">Email ist ungültig</span>
+          </span>
+        </div>
 
-  <!-- Checkbox -->
-  <label>
-   <input class="custom_checkbox"
-         type="checkbox"
-         [(ngModel)]="acceptedPrivacy"
-         name="privacy"
-         required
-         #privacy="ngModel"
-         (blur)="markTouched('privacy')"
-         [ngClass]="{'filled': name.valid && email.valid && message.valid}">
-    <span>
-      {{ t('PRIVACY_POLICY_CONTACT_PART1') }}
-      <a (click)="goTo('privacy-policy')">{{ t('PRIVACY_POLICY_CONTACT_LINK') }}</a>
-      {{ t('PRIVACY_POLICY_CONTACT_PART2') }}
-    </span>
-  </label>
-  <div class="error" *ngIf="touched.privacy && privacy.invalid">
-    Bitte akzeptiere die Datenschutzbestimmungen
-  </div>
+        <!-- Message -->
+        <textarea [(ngModel)]="contactData.message" name="Your Message" placeholder="{{ t('MESSAGE_INPUT') }}" required
+          minlength="5" #message="ngModel" (blur)="markTouched('message')"></textarea>
+        <span class="error error_message" *ngIf="touched.message && message.invalid">
+          <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
+          <span *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen haben</span>
+        </span>
+      </div>
 
-  <!-- Button -->
-  <div class="button_section">
-    <button [disabled]="contactForm.invalid" [ngClass]="{'active': contactForm.valid}">
-      {{ t('SEND_BUTTON') }}
-    </button>
-  </div>
+      <!-- Checkbox -->
+      <div class="checkbox_div">
 
-  <!-- Erfolgsnachricht -->
-  <div class="success" *ngIf="successMsg">{{ successMsg }}</div>
-</form>
+        <label>
+          <input class="custom_checkbox" type="checkbox" [(ngModel)]="acceptedPrivacy" name="privacy" required
+            #privacy="ngModel" (blur)="markTouched('privacy')"
+            [ngClass]="{'filled': name.valid && email.valid && message.valid}">
+          <span>
+            {{ t('PRIVACY_POLICY_CONTACT_PART1') }}
+            <a (click)="goTo('privacy-policy')">{{ t('PRIVACY_POLICY_CONTACT_LINK') }}</a>
+            {{ t('PRIVACY_POLICY_CONTACT_PART2') }}
+          </span>
+        </label>
+      </div>
+
+      <div class="error" *ngIf="touched.privacy && privacy.invalid">
+        Bitte akzeptiere die Datenschutzbestimmungen
+      </div>
+
+      <!-- Button -->
+      <div class="button_section">
+        <button [disabled]="contactForm.invalid" [ngClass]="{'active': contactForm.valid}">
+          {{ t('SEND_BUTTON') }}
+        </button>
+      </div>
+
+      <!-- Erfolgsnachricht -->
+      <div class="success" *ngIf="successMsg">{{ successMsg }}</div>
+    </form>
 
 
   </div>
