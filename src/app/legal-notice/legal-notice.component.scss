@@ -1,14 +1,28 @@
+$pad: 30px;
+$max-inner: 1224px;
+
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
+}
+
+
+
 section {
     height: auto;
     width: auto;
     display: flex;
     justify-content: center;
+    background-color: #1e0a7d;
+
 
     >div {
-        padding-left: 100px;
-        padding-right: 100px;
+        @extend .container;
         width: 1439px;
-        background-color: #1e0a7d;
         padding-bottom: 50px;
         text-align: left;
     }
@@ -17,7 +31,13 @@ section {
 }
 
 
+h1 {
+    margin-bottom: 30px;
+}
 
+h2 {
+    margin-bottom: 30px;
+}
 
 h3 {
     font-family: 'RobotMonoMedium';
@@ -51,6 +71,7 @@ p {
             padding: 30px;
         }
     }
+
     h1 {
         font-weight: 700;
         font-style: Bold;

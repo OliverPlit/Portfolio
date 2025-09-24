@@ -1,3 +1,17 @@
+$pad: 30px;
+$max-inner: 1224px;
+
+
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
+}
+
+
 h4 {
     font-family: 'RobotMonoMedium';
     color: #E15544;
@@ -28,8 +42,11 @@ section {
     background: linear-gradient(to bottom, #0d0536, #120848);
     height: 307px;
     opacity: 1;
-    padding-left: 165px;
     padding-bottom: 150px;
+        >div {
+                    @extend .container;
+
+        }
 
 }
 

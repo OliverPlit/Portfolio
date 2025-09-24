@@ -37,7 +37,7 @@ export class ContactMeComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://oliver-plit.com/sendMail.php',
+    endPoint: 'https://oliver-plit.com/',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

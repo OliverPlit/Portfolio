@@ -1,5 +1,20 @@
+$pad: 30px;
+$max-inner: 1224px;
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
+}
+
+
 section {
     background: linear-gradient(to bottom, #120848, #190a60);
+    >div {
+         @extend .container;
+    }
 }
 
 @mixin flex-between {
@@ -105,7 +120,6 @@ span {
 
 .arrow_down {
     margin-left: auto;
-    margin-right: 160px;
     width: 22px;
     height: 50px;
     background: url('../../../assets/arrows/arrow_up.png') no-repeat center;
@@ -192,8 +206,8 @@ span {
 
       input:-webkit-autofill,
 textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* gleiche Farbe wie dein Background */
-    -webkit-text-fill-color: #02F4BF; /* Textfarbe */
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: #02F4BF; 
     transition: background-color 5000s ease-in-out 0s;
 }
     }
@@ -329,12 +343,12 @@ button.active {
 
 .inputs > div .error_name {
   position: absolute;
-  bottom: 100px;       /* direkt am unteren Rand des Feldes */
+  bottom: 100px;      
   left: auto;
-  right: 50px;        /* etwas Abstand von links */
+  right: 50px;        
   font-size: 12px;
   color: red;
-  pointer-events: none; /* blockiert die Eingabe nicht */
+  pointer-events: none; 
   background: transparent;
 }
 

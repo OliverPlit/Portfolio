@@ -32,17 +32,28 @@ p {
 
 }
 
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
+}
+
+
+
+
 section {
     background: linear-gradient(to bottom, #0b042d, #180963);
     height: 452px;
-    padding-left: 105px;
     padding-bottom: 80px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
 
     >div {
-        width: min($max-inner, calc(100% - #{$pad} * 2));
+        @extend .container;
         display: flex;
         justify-content: space-between;
         gap: 8px;
@@ -152,10 +163,12 @@ section {
 .remote_arrows {
     display: flex;
     gap: 120px;
+
     >img {
         padding-left: 20px;
     }
 }
+
 .remote_text {
     width: 125px;
     text-align: left;

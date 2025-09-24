@@ -1,9 +1,20 @@
+$pad: 30px;
+$max-inner: 1224px;
+
 h2 {
   font-family: 'RobotMonoMedium';
   color: #E15544;
   font-size: 54px;
   padding-left: 111px;
 
+}
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
 }
 
 
@@ -16,12 +27,14 @@ padding-bottom: 120px;
   box-sizing: border-box;
 
   >div {
+     @extend .container;
+             padding-top: 30px;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 60px;
     align-items: center;
     max-width: 1275px;
-    padding: 30px 105px 0px 105px;
     margin: 0 auto;
 
   }

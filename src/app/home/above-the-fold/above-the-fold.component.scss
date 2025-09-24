@@ -1,12 +1,13 @@
+$pad: 30px;
+$max-inner: 1224px;
+
+
 .font {
     font-family: 'RobotMonoMedium';
     color: #02F4BF;
     font-size: 54px;
 }
 
-h2 {
-    padding-left: 105px;
-}
 
 .name {
     font-weight: 700;
@@ -19,6 +20,7 @@ h2 {
 
 .button_above {
   position: relative;  
+  right: 240px;
   top: 150px;  
   display: inline-flex; 
   justify-content: center;
@@ -26,7 +28,7 @@ h2 {
   padding: 10px 20px;   
   min-height: 52px;      
   min-width: 169px;      
-  margin-left: 50px;
+  margin-left: 200px;
   transform: rotate(270deg);
   gap: 10px;
   font-family: 'RobotMonoMedium';
@@ -46,12 +48,23 @@ h2 {
   }
 }
 
+
+.container {
+    width: 100%;
+    max-width: $max-inner;
+    margin: 0 auto;
+    padding: 0 $pad;
+    box-sizing: border-box;
+}
+
+
 section {
     background-color: #0b042d;
     height: 556px;
     min-height: 100vh;
     >div {
     background-color: #0b042d;
+        @extend .container;
 
     }
 
@@ -59,8 +72,7 @@ section {
 
 .content {
   display: flex;
-    gap: 250px;
-      padding-right: 30px;
+    gap: 100px;
 
 }
 
@@ -89,7 +101,7 @@ section {
     height: 50px;
     position: absolute;
     top: 336px;
-    left: 715px;
+    left: 945px;
     transform: rotate(180) deg;
     opacity: 1;
 
@@ -113,13 +125,11 @@ section {
 .hero {
   width: 100%;
   display: flex;
-  justify-content: flex-end; // damit Hero-Shot rechts bleibt
-  padding-right: 30px;  
+  justify-content: flex-end; 
  }
 
 
 .hero_shot {
- width: 100%;         // Breite nimmt den verfügbaren Platz ein
   max-width: 539px;
   max-height: 554px;
   height: 100%;

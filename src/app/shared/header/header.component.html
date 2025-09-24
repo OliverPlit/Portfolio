@@ -8,18 +8,16 @@
     <a href="#skills" class="font">{{ t('NAV_SKILLS') }}</a>
     <a href="#projects" class="font">{{ t('NAV_PROJECTS') }}</a>
     <a href="#contact" class="font">{{ t('NAV_CONTACT') }}</a>
-  </div>
 
-  <div>
-    <p class="font">
-      <span (click)="switchLang('de')">DE</span> | 
-      <span (click)="switchLang('en')">EN</span>
-    </p>
-    <img class="menu_icon" src="../../../assets/logos/burger menu.png" alt="" 
-         style="display: none;" (click)="toggleMenu()">
-  </div>
-
-  <div class="mobile-menu" *ngIf="isMenuOpen">
+    <div>
+      <p class="font">
+        <span (click)="switchLang('de')">DE</span> |
+        <span (click)="switchLang('en')">EN</span>
+      </p>
+      <img class="menu_icon" src="../../../assets/logos/burger menu.png" alt="" style="display: none;"
+        (click)="toggleMenu()">
+    </div>
+     <div class="mobile-menu" *ngIf="isMenuOpen">
     <img src="../../../assets/icons/close.png" alt="" (click)="closeMenu()">
     <div>
       <a href="#why_me" class="font_responsive">{{ t('NAV_WHY_ME') }}</a>
@@ -28,10 +26,13 @@
       <a href="#contact" class="font_responsive">{{ t('NAV_CONTACT') }}</a>
       <div>
         <p class="font_responsive">
-      <span (click)="switchLang('de')">DE</span> | 
-      <span (click)="switchLang('en')">EN</span>
-    </p>
+          <span (click)="switchLang('de')">DE</span> |
+          <span (click)="switchLang('en')">EN</span>
+        </p>
       </div>
     </div>
   </div>
+  </div>
+
+ 
 </header>
