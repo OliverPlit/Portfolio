@@ -44,7 +44,6 @@ section {
 
 span {
      color: #02F4BF;
-    margin-top: 70px;
     font-family: 'RobotMonoMedium';
 }
 
@@ -54,6 +53,7 @@ span {
     >div {
         @include flex-between;
         gap: 50px;
+        margin-bottom: 10px;
 
     }
 }
@@ -276,7 +276,6 @@ a {
 }
 
 button {
-    width: 104px;
     height: 52px;
     font-family: 'RobotMonoMedium';
     color: #827B7B;
@@ -304,6 +303,7 @@ button {
     cursor: not-allowed;
 }
 
+
 button.active {
     opacity: 1;
     cursor: pointer;
@@ -311,53 +311,50 @@ button.active {
     border: #02F4BF solid;
 }
 
+
 .errorstyle {
     color: red;
     font-size: 12px;
     margin-top: 2px;
 }
 
+
 .success {
     color: green;
     margin-top: 10px;
 }
+
+
 .inputs > div {
   position: relative; 
 }
 
-.inputs > div input,
-.inputs > div textarea {
-  padding-bottom: 22px; 
-}
 
 .inputs > div .error_email {
   position: absolute;
   bottom: 4px;      
   left: auto;
   right: 50px;        
-  font-size: 12px;
+  font-size: 12px !important;
   color: red !important;
   pointer-events: none; 
   background: transparent;
 }
+
 
 .inputs > div .error_name {
   position: absolute;
   bottom: 100px;      
   left: auto;
   right: 50px;        
-  font-size: 12px;
+  font-size: 12px !important;
   color: red;
   pointer-events: none; 
   background: transparent;
 }
 
 
-.inputs > textarea .error_message {
-  position: absolute;
-  bottom: 4px;      
-  left: auto;
-  right: 50px;        
+.inputs > .error_message { 
   font-size: 12px;
   color: red !important;
   pointer-events: none; 
@@ -370,3 +367,5 @@ button.active {
     font-family: 'RobotMonoMedium';
     margin-top: 10px;
 }
+
+

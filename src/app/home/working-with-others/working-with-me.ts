@@ -1,7 +1,7 @@
 export const Feedbacks = [
     {
         name: 'Eric Braun',
-        description: '´´Oliver war im Team eine starke Unterstützung – sehr hilfsbereit, zuverlässig und mit vielen kreativen Ideen. Seine Beiträge haben das Projekt nicht nur vorangebracht, sondern auch bereichert. Die Zusammenarbeit mit ihm war durchweg positiv und hat richtig Spaß gemacht.´´',
+        description: '´´Oliver war im Team eine starke Unterstützung – sehr hilfsbereit, zuverlässig und mit vielen kreativen Ideen. ``',
         project : 'Join'
 
     },
@@ -13,7 +13,7 @@ export const Feedbacks = [
     },
     {
         name: 'Flynn',
-        description: '´´Oli hat sich aktiv an den Gruppengesprächen beteiligt und mit seiner offenen Art zu einer angenehmen Zusammenarbeit beigetragen. Besonders in den Diskussionen konnte er eigene Gedanken einbringen und so die Arbeit im Team bereichern.´´',
+        description: '´´Oli hat sich aktiv an den Gruppengesprächen beteiligt und mit seiner offenen Art zu einer angenehmen Zusammenarbeit beigetragen.``',
         project: 'Join'
 
     },

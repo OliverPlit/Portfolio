@@ -26,7 +26,7 @@ header {
   scroll-behavior: smooth;
   background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%);
 
-  >div:first-child {
+  >div {
     display: flex;
     align-items: center;
     gap: 48px;
@@ -57,6 +57,10 @@ header {
     }
   }
 
+
+  .language {
+margin-left: auto;
+  }
   >div:last-child {
 
     >p {
@@ -74,14 +78,21 @@ header {
     color: #02F4BF;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 850px) {
     .font {
       display: none;
     }
 
     .menu_icon {
       display: flex !important;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+    transform: translateY(-50%);
     }
+
+
+
   }
 
   @media (min-width: 421px) and (max-width: 889px) {

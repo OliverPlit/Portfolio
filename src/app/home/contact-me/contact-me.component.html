@@ -21,22 +21,26 @@
           </p>
         </div>
         <div class="contact_sections phone">
-          <div class="icon"></div>
+          <a href="tel:+491575434352452">
+
+            <div class="icon"></div>
+          </a>
+
           <p class="font">
             <span class="label_email">{{ t('PHONE_LABEL') }}</span> +49 1575 4343 52452
           </p>
         </div>
       </div>
     </div>
-   
+
 
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
-       <div class="arrow_down_responsive">
-      <a href="#header">
-        <div class="arrow_down"></div>
-      </a>
-    </div>
+      <div class="arrow_down_responsive">
+        <a href="#header">
+          <div class="arrow_down"></div>
+        </a>
+      </div>
       <div class="inputs">
         <div>
           <!-- Name Input -->
@@ -58,11 +62,13 @@
         </div>
 
         <!-- Message -->
+
         <textarea [(ngModel)]="contactData.message" name="Your Message" placeholder="{{ t('MESSAGE_INPUT') }}" required
           minlength="5" #message="ngModel" (blur)="markTouched('message')"></textarea>
-        <span class="error error_message" *ngIf="touched.message && message.invalid">
+        <span class="error_message" *ngIf="touched.message && message.invalid">
           <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
-          <span *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen haben</span>
+          <span class="error_message" *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen
+            haben</span>
         </span>
       </div>
 
@@ -93,7 +99,7 @@
       </div>
 
       <!-- Erfolgsnachricht -->
-      <div class="success" *ngIf="successMsg">{{ successMsg }}</div>
+      <div class="font" *ngIf="successMsg">{{ successMsg }}</div>
     </form>
 
 

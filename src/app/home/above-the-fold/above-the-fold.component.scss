@@ -20,7 +20,7 @@ $max-inner: 1224px;
 
 .button_above {
   position: relative;  
-  right: 240px;
+  right: 250px;
   top: 150px;  
   display: inline-flex; 
   justify-content: center;
@@ -46,6 +46,9 @@ $max-inner: 1224px;
     color: #02F4BF;
     cursor: pointer;
   }
+   &:focus {
+  border-color: #E15544;
+}
 }
 
 
@@ -72,7 +75,7 @@ section {
 
 .content {
   display: flex;
-    gap: 100px;
+    gap: 70px;
 
 }
 
@@ -101,7 +104,7 @@ section {
     height: 50px;
     position: absolute;
     top: 336px;
-    left: 945px;
+    left: 995px;
     transform: rotate(180) deg;
     opacity: 1;
 

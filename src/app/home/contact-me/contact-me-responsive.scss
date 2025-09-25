@@ -132,9 +132,7 @@
     }
 
     span {
-        width: 100%;
         font-weight: 400;
-        font-size: 16px;
         line-height: 120%;
         letter-spacing: 0%;
         text-align: center;
@@ -147,7 +145,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 570px) {
     h2 {
         font-weight: 700;
         font-style: Bold;
@@ -159,9 +157,6 @@
 
     form {
         .inputs {
-
-
-
             >textarea {
                 width: auto !important;
             }
@@ -186,4 +181,22 @@
         }
     }
 
+    .inputs>div .error_name {
+        bottom: 90px;
+        left: 70px;
+        right: 0;
+    }
+
+
+    .inputs>div .error_email {
+        left: 70px;
+        right: 0;
+
+    }
+
+    .button_section {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
 }
