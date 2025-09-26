@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
 
@@ -9,7 +9,7 @@ import { LanguageService } from '../../language.service';
   templateUrl: './why-me.component.html',
   styleUrls: ['./why-me.component.scss', './why-me-responsive.scss']
 })
-export class WhyMeComponent {
+export class WhyMeComponent implements AfterViewInit {
   lang: 'de' | 'en' = 'en';
 
   translations = {
@@ -33,11 +33,31 @@ export class WhyMeComponent {
     }
   };
 
-  constructor(private langService: LanguageService) {
+  constructor(private langService: LanguageService, private el: ElementRef) {
     this.langService.lang$.subscribe(l => this.lang = l);
   }
 
   t(key: keyof typeof this.translations['en']): string {
     return this.translations[this.lang][key];
   }
+
+ngAfterViewInit(): void {
+  const container = this.el.nativeElement.querySelector('.content');
+  if (container) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view'); // Animation auslösen
+            observer.unobserve(entry.target); // nur einmal animieren
+          }
+        });
+      },
+      { threshold: 0.7 } // Animiert, wenn 20% der Sektion sichtbar sind
+    );
+    observer.observe(container);
+  }
+}
+
+
 }

@@ -69,12 +69,10 @@ section {
 }
 
 .picture_why_me {
-    width: 488px;
-    height: 452px;
+    width: auto;
     max-width: 100%;
-    height: auto;
-
-
+    height: 452px;
+object-fit: contain
 }
 
 
@@ -307,4 +305,38 @@ section {
     100% {
         transform: rotate(6deg) scale(1.2);
     }
+}
+
+/* Content-Container animieren, nicht das Bild */
+.content {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+/* Wenn sichtbar */
+.content.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: gestaffelte Animation für Unterelemente */
+.header_div {
+  transition: all 0.6s ease-out;
+  transition-delay: 0.2s;
+}
+
+.content p {
+  transition: all 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.location_div {
+  transition: all 0.6s ease-out;
+  transition-delay: 0.6s;
+}
+
+.button_bottom {
+  transition: all 0.6s ease-out;
+  transition-delay: 0.8s;
 }
