@@ -1,10 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../language.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-contact-me',
@@ -16,43 +15,17 @@ import { Router } from '@angular/router';
     './contact-me-responsive.scss'
   ]
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements AfterViewInit {
   http = inject(HttpClient);
   private router = inject(Router);
+  private el = inject(ElementRef); // ElementRef für IntersectionObserver
 
-
-
-  goTo(path: string) {
-    this.router.navigate([path]).then(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  contactData = {
-    name: "",
-    email: "",
-    message: "",
-  }
-
-  mailTest = true;
-
-  post = {
-    endPoint: 'https://oliver-plit.com/',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-
-  // --- NEU: Mehrsprachige Texte ---
+  // --- Language & Translations ---
   lang: 'de' | 'en' = 'en';
   translations = {
     de: {
       HEADER: 'Kontaktiere mich',
-      DESCRIPTION: 'Als Frontend Entwickler bin ich immer auf der Suche nach neuen Herausforderungen und Projekten, bei denen ich mein Wissen einbringen kann. Ich freue mich auf deine Nachricht und darauf, gemeinsam etwas Großartiges zu schaffen.',
+      DESCRIPTION: 'Als Frontend Entwickler bin ich immer auf der Suche nach neuen Herausforderungen',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
       PRIVACY_POLICY_CONTACT_PART1: 'Ich habe die ',
@@ -62,23 +35,33 @@ export class ContactMeComponent {
       NAME_INPUT: 'Dein Name',
       MAIL_INPUT: 'Deine Email',
       MESSAGE_INPUT: 'Deine Nachricht',
-
-
     },
     en: {
       HEADER: 'Contact me',
-      DESCRIPTION: 'As Frontend Developer, I am always looking for new challenges and projects where I can contribute my knowledge. I look forward to hearing from you and creating something great together.',
+      DESCRIPTION: 'As Frontend Developer, I am always looking for new challenges',
       EMAIL_LABEL: 'Email:',
       PHONE_LABEL: 'Tel:',
       PRIVACY_POLICY_CONTACT_PART1: 'I\'ve read the ',
       PRIVACY_POLICY_CONTACT_LINK: 'privacy policy',
-      PRIVACY_POLICY_CONTACT_PART2: ' and agree to the processing of my data as outlined.',
+      PRIVACY_POLICY_CONTACT_PART2: ' and agree to the processing of my data.',
       SEND_BUTTON: 'Send',
       NAME_INPUT: 'Your Name',
       MAIL_INPUT: 'Your Email',
       MESSAGE_INPUT: 'Your Message',
-
     }
+  };
+
+  contactData = { name: "", email: "", message: "" };
+  acceptedPrivacy = false;
+  successMsg = '';
+  touched = { name: false, email: false, message: false, privacy: false };
+
+  post = {
+    endPoint: 'https://oliver-plit.com/',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: { 'Content-Type': 'text/plain', responseType: 'text' },
+    },
   };
 
   constructor(private langService: LanguageService) {
@@ -93,39 +76,52 @@ export class ContactMeComponent {
     this.langService.setLanguage(lang);
   }
 
-  // --- E-Mail Funktion bleibt unverändert ---
-  acceptedPrivacy = false;
-  successMsg = '';
-
-  touched = { name: false, email: false, message: false, privacy: false };
-
   markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
     this.touched[field] = true;
   }
 
   onSubmit(ngForm: NgForm) {
-    // Alle Felder als touched markieren, falls Submit gedrückt wird
     Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
 
     if (ngForm.valid) {
-      console.log("Daten zum Senden:", this.contactData, "Privacy akzeptiert:", this.acceptedPrivacy);
-
       this.http.post(this.post.endPoint, this.contactData, {
         headers: { 'Content-Type': 'application/json' },
-        responseType: 'text'  // wenn dein PHP plain text zurückgibt
+        responseType: 'text'
       }).subscribe({
-        next: (response) => {
-          console.log("Server Response:", response);
+        next: response => {
           this.successMsg = 'Formular erfolgreich versendet!';
           ngForm.resetForm();
           this.acceptedPrivacy = false;
           Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
         },
-        error: (error) => {
+        error: error => {
           console.error(error);
           this.successMsg = 'Fehler beim Senden der Mail!';
         }
       });
+    }
+  }
+
+  goTo(path: string) {
+    this.router.navigate([path]).then(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  ngAfterViewInit(): void {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      setTimeout(() => {
+        const elements = this.el.nativeElement.querySelectorAll('.animate_left');
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        elements.forEach((el: HTMLElement) => observer.observe(el));
+      }, 50);
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Projects } from './my-projects';
 import { LanguageService } from '../../language.service';
@@ -58,7 +58,7 @@ export class MyProjectsComponent {
     }
   };
 
-  constructor(private langService: LanguageService) {
+  constructor(private langService: LanguageService, private el: ElementRef) {
     this.langService.lang$.subscribe(l => this.lang = l);
   }
 
@@ -72,4 +72,10 @@ export class MyProjectsComponent {
   t(key: keyof typeof this.translations['en']) {
     return this.translations[this.lang][key];
   }
+
+
+
 }
+  
+
+

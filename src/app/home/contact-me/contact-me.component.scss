@@ -368,4 +368,13 @@ button.active {
     margin-top: 10px;
 }
 
+.animate_left {
+  opacity: 0;
+  transform: translateX(-50px); // Start links außerhalb
+  transition: all 0.8s ease-out;
+}
 
+.animate_left.in-view {
+  opacity: 1;
+  transform: translateX(0); // Endposition
+}

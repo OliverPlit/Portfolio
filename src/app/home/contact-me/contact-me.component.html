@@ -1,17 +1,17 @@
 <section>
-  <div class="firstcontainer">
+  <div class="firstcontainer ">
 
-    <div>
+    <div class="animate_left">
       <h2>{{ t('HEADER') }}</h2>
       <img class="arrow_top" src="../../assets/arrows/arrow_contact.png" alt="">
     </div>
 
-    <div>
+    <div class="animate_left">
       <div class="text_contact">
         <span class="font">{{ t('DESCRIPTION') }}</span>
       </div>
 
-      <div class="div_contact">
+      <div class="div_contact animate_left">
         <div class="contact_sections email">
           <a href="mailto:oliverplit2005@gmail.com">
             <div class="icon"></div>
@@ -35,7 +35,7 @@
 
 
 
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate class="animate_left">
       <div class="arrow_down_responsive">
         <a href="#header">
           <div class="arrow_down"></div>

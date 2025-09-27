@@ -141,5 +141,37 @@ section {
  }
 
 
+.animate_left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate_left.in-view {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.animate_right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate_right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.button_above.animate_rotate {
+  opacity: 0;
+  transform: translateX(-50px) rotate(270deg); 
+  transition: all 0.8s ease-out;
+}
+
+.button_above.animate_rotate.in-view {
+  opacity: 1;
+  transform: translateX(0) rotate(270deg); 
+}
 
  
