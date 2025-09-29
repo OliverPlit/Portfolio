@@ -59,18 +59,21 @@ header {
 
 
   .language {
-margin-left: auto;
+    margin-left: auto;
   }
+
   >div:last-child {
+    div {
+      >p {
+        font-size: 18px;
 
-    >p {
-      font-size: 18px;
-
-      span:hover {
-        cursor: pointer;
-        color: #02F4BF;
+        span:hover {
+          cursor: pointer;
+          color: #02F4BF;
+        }
       }
     }
+
   }
 
   a:target {
@@ -88,7 +91,7 @@ margin-left: auto;
       position: absolute;
       right: 30px;
       top: 50%;
-    transform: translateY(-50%);
+      transform: translateY(-50%);
     }
 
 

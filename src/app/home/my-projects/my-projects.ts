@@ -15,13 +15,5 @@ export const Projects = [
         image: '../../assets/projects/Component 1 (1) 2.png',
         github: 'https://github.com/OliverPlit/El-Pollo-Loco.git',
         live: 'https://el-pollo.oliver-plit.com'
-    },
-    {
-        title: 'DaBubble',
-        technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
-        description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-        image: '../../assets/projects/Component 1 (1) 2.png',
-        github: '#',
-        live: '#'
     }
 ];

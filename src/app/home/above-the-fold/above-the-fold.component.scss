@@ -65,9 +65,13 @@ section {
     background-color: #0b042d;
     height: 556px;
     min-height: 100vh;
+    display: flex;
+            align-items: center;
+
     >div {
     background-color: #0b042d;
         @extend .container;
+        margin-bottom: 200px;
 
     }
 

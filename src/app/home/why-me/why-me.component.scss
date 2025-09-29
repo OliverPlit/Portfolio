@@ -195,7 +195,6 @@ object-fit: contain
     background-position: center;
 
     &:hover {
-        cursor: pointer;
         background-image: url('../../../assets/hover/remote-hover.png');
         display: flex;
         align-items: center;

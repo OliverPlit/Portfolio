@@ -42,20 +42,29 @@ export class WhyMeComponent implements AfterViewInit {
   }
 
 ngAfterViewInit(): void {
-  const container = this.el.nativeElement.querySelector('.content');
-  if (container) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view'); // Animation auslösen
-            observer.unobserve(entry.target); // nur einmal animieren
-          }
-        });
-      },
-      { threshold: 0.7 } // Animiert, wenn 20% der Sektion sichtbar sind
-    );
-    observer.observe(container);
+  // Prüfen, ob wir im Browser sind und IntersectionObserver verfügbar ist
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    const container = this.el.nativeElement.querySelector('.content');
+    if (container) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view'); // Animation auslösen
+              observer.unobserve(entry.target); // nur einmal animieren
+            }
+          });
+        },
+        { threshold: 0.7 }
+      );
+      observer.observe(container);
+    }
+  } else {
+    console.warn('IntersectionObserver nicht verfügbar – Fallback aktiv.');
+    const container = this.el.nativeElement.querySelector('.content');
+    if (container) {
+      container.classList.add('in-view');
+    }
   }
 }
 

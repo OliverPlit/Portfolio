@@ -79,7 +79,7 @@
           <input class="custom_checkbox" type="checkbox" [(ngModel)]="acceptedPrivacy" name="privacy" required
             #privacy="ngModel" (blur)="markTouched('privacy')"
             [ngClass]="{'filled': name.valid && email.valid && message.valid}">
-          <span>
+          <span class="fonts">
             {{ t('PRIVACY_POLICY_CONTACT_PART1') }}
             <a (click)="goTo('privacy-policy')">{{ t('PRIVACY_POLICY_CONTACT_LINK') }}</a>
             {{ t('PRIVACY_POLICY_CONTACT_PART2') }}
