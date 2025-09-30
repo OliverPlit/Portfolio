@@ -118,15 +118,24 @@
   }
 
   section {
-    >div {
-      grid-template-columns: repeat(auto-fit, minmax(75px, auto));
+    div {
+      gap: 10px;
+
     }
   }
 
-.tech-content {
-  >img {
-  width: 50px !important;  }
-}
+
+  section {
+    >div {
+      grid-template-columns: repeat(auto-fit, minmax(65px, auto));
+    }
+  }
+
+  .tech-content {
+    >img {
+      width: 50px !important;
+    }
+  }
 
 
   img {

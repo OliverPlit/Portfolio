@@ -99,6 +99,13 @@
     .arrow_down {
         display: none;
     }
+
+    .error_message {
+
+        margin-left: 100px;
+
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -199,4 +206,27 @@
         align-items: center;
         justify-content: center;
     }
+
+    .error_message {
+        margin-left: 0px;
+  word-break: break-word;
+
+    }
+
+.inputs > div .error_email {
+  position: absolute;
+  bottom: -20px;      
+  left: auto;
+  right: 50px;        
+ 
+}
+
+
+.inputs > div .error_name {
+  position: absolute;
+  bottom: 65px;      
+  left: auto;
+  right: 0px;   
+  
+}
 }

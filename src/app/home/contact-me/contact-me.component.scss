@@ -12,8 +12,9 @@ $max-inner: 1224px;
 
 section {
     background: linear-gradient(to bottom, #120848, #190a60);
+
     >div {
-         @extend .container;
+        @extend .container;
     }
 }
 
@@ -43,7 +44,7 @@ section {
 }
 
 .fonts {
-     color: #02F4BF;
+    color: #02F4BF;
     font-family: 'RobotMonoMedium';
 }
 
@@ -113,6 +114,7 @@ section {
 .checkbox_div {
     margin-top: 30px;
 }
+
 .text_contact {
     width: 504px;
     margin-top: 10px;
@@ -158,7 +160,8 @@ section {
     top: 50%;
     width: 4px;
     height: 10px;
-    border: solid #E15544; /* Haken orange */
+    border: solid #E15544;
+    /* Haken orange */
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -166,7 +169,8 @@ section {
 
 
 .custom_checkbox.filled {
-    background-color: #02F4BF; /* türkis */
+    background-color: #02F4BF;
+    /* türkis */
 }
 
 .arrow_down_responsive {
@@ -200,16 +204,16 @@ section {
                 line-height: 140%;
             }
 
-            
+
 
         }
 
-      input:-webkit-autofill,
-textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    -webkit-text-fill-color: #02F4BF; 
-    transition: background-color 5000s ease-in-out 0s;
-}
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+            -webkit-text-fill-color: #02F4BF;
+            transition: background-color 5000s ease-in-out 0s;
+        }
     }
 
 
@@ -326,42 +330,43 @@ button.active {
 }
 
 
-.inputs > div {
-  position: relative; 
+.inputs>div {
+    position: relative;
 }
 
 
-.inputs > div .error_email {
-  position: absolute;
-  bottom: 4px;      
-  left: auto;
-  right: 50px;        
-  font-size: 12px !important;
-  color: red !important;
-  pointer-events: none; 
-  background: transparent;
+.inputs>div .error_email {
+    position: absolute;
+    bottom: 4px;
+    left: auto;
+    right: 50px;
+    font-size: 12px !important;
+    color: red !important;
+    pointer-events: none;
+    background: transparent;
 }
 
 
-.inputs > div .error_name {
-  position: absolute;
-  bottom: 100px;      
-  left: auto;
-  right: 50px;        
-  font-size: 12px !important;
-  color: red !important;
-  pointer-events: none; 
-  background: transparent;
+.inputs>div .error_name {
+    position: absolute;
+    bottom: 100px;
+    left: auto;
+    right: 50px;
+    font-size: 12px !important;
+    color: red !important;
+    pointer-events: none;
+    background: transparent;
 }
 
 
-.inputs > .error_message { 
-        font-family: 'RobotMonoMedium';
-
-  font-size: 12px;
-  color: red !important;
-  pointer-events: none; 
-  background: transparent;
+.error_message {
+    font-family: 'RobotMonoMedium';
+    display: block;
+    margin-left: 290px;
+    font-size: 12px;
+    color: red !important;
+    pointer-events: none;
+    background: transparent;
 }
 
 
@@ -372,23 +377,35 @@ button.active {
 }
 
 .animate_left {
-  opacity: 0;
-  transform: translateX(-50px); // Start links außerhalb
-  transition: all 0.8s ease-out;
+    opacity: 0;
+    transform: translateX(-50px); // Start links außerhalb
+    transition: all 0.8s ease-out;
 }
 
 .animate_left.in-view {
-  opacity: 1;
-  transform: translateX(0); // Endposition
+    opacity: 1;
+    transform: translateX(0); 
 }
 
-
-
-.errorstyle,
-.error,
-.error_email,
-.error_name,
-.error_message {
-  color: red !important;
-  font-size: 12px !important;
+.font.success-message {
+  color: #02F4BF;             
+  background: rgba(2, 244, 191, 0.1);
+  border: 1px solid #02F4BF;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  animation: success-pop 0.6s ease-out, success-glow 2s infinite alternate;
 }
+
+@keyframes success-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes success-glow {
+  from { box-shadow: 0 0 4px rgba(2, 244, 191, 0.4); }
+  to { box-shadow: 0 0 15px rgba(2, 244, 191, 0.8); }
+}
+
