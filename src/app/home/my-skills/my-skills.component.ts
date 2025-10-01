@@ -11,7 +11,7 @@ import { LanguageService } from '../../language.service';
     './my-skills-responsive.scss'
   ] 
 })
-export class MySkillsComponent implements AfterViewInit {
+export class MySkillsComponent {
   lang: 'de' | 'en' = 'en';
 
 translations = {
@@ -36,23 +36,7 @@ translations = {
     return this.translations[this.lang][key];
   }
 
-  ngAfterViewInit(): void {
-  const container = this.el.nativeElement.querySelector('.tech-content');
-  if (container) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view'); 
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
-    observer.observe(container);
-  }
-}
+ 
 
 }
 

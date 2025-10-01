@@ -3,31 +3,31 @@ $max-inner: 1224px;
 
 
 .font {
-    font-family: 'RobotMonoMedium';
-    color: #02F4BF;
-    font-size: 54px;
+  font-family: 'RobotMonoMedium';
+  color: #02F4BF;
+  font-size: 54px;
 }
 
 
 .name {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 82px;
-    line-height: 120%;
-    letter-spacing: 0%;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 82px;
+  line-height: 120%;
+  letter-spacing: 0%;
 
 }
 
 .button_above {
-  position: relative;  
+  position: relative;
   right: 250px;
-  top: 150px;  
-  display: inline-flex; 
+  top: 150px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;   
-  min-height: 52px;      
-  min-width: 169px;      
+  padding: 10px 20px;
+  min-height: 52px;
+  min-width: 169px;
   margin-left: 200px;
   transform: rotate(270deg);
   gap: 10px;
@@ -46,85 +46,97 @@ $max-inner: 1224px;
     color: #02F4BF;
     cursor: pointer;
   }
-   &:focus {
-  border-color: #E15544;
-}
+
+  &:focus {
+    border-color: #E15544;
+  }
 }
 
 
 .container {
-    width: 100%;
-    max-width: $max-inner;
-    margin: 0 auto;
-    padding: 0 $pad;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: $max-inner;
+  margin: 0 auto;
+  padding: 0 $pad;
+  box-sizing: border-box;
 }
 
 
 section {
-    background-color: #0b042d;
-    height: 556px;
-    min-height: 100vh;
-    display: flex;
-            align-items: center;
+  position: relative;
+  background-color: #0b042d;
+  height: 556px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 
-    >div {
+  >div {
     background-color: #0b042d;
-        @extend .container;
-        margin-bottom: 200px;
+    @extend .container;
+    margin-bottom: 200px;
+    position: relative;
 
-    }
+  }
 
 }
 
 .content {
   display: flex;
-    gap: 70px;
+  gap: 70px;
 
 }
 
 .headers {
-    height: 142px;
-    margin-top: 370px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  white-space: nowrap; 
+  height: 142px;
+  margin-top: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  white-space: nowrap;
 
 }
 
 
 .job {
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 54px;
-    line-height: 120%;
-    letter-spacing: 0%;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 54px;
+  line-height: 120%;
+  letter-spacing: 0%;
 
 }
 
+
+
+.arrow_wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(150px + 52px / 2);
+  display: flex;
+  justify-content: center;
+}
+
 .arrow_down {
+  width: 22px;
+  height: 50px;
+  transform: rotate(360) deg;
+  transition: all 0.3s ease;
+
+
+  &:hover {
+    cursor: pointer;
+    background-image: url('../../../assets/hover/arrow-down-hover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #02F4BF;
+    padding: 10px;
+    box-sizing: border-box;
     width: 22px;
-    height: 50px;
-    position: absolute;
-    top: 336px;
-    left: 995px;
-    transform: rotate(180) deg;
-    opacity: 1;
-
-    &:hover {
-        cursor: pointer;
-        background-image: url('../../../assets/hover/arrow-down-hover.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 1px solid #02F4BF;
-        padding: 10px;
-        box-sizing: border-box;
-        width: 22px;
-        height: 55px;
+    height: 55px;
 
 
-    }
+  }
 
 }
 
@@ -132,8 +144,8 @@ section {
 .hero {
   width: 100%;
   display: flex;
-  justify-content: flex-end; 
- }
+  justify-content: flex-end;
+}
 
 
 .hero_shot {
@@ -141,8 +153,8 @@ section {
   max-height: 554px;
   height: 100%;
 
-      
- }
+
+}
 
 
 .animate_left {
@@ -153,7 +165,7 @@ section {
 
 .animate_left.in-view {
   opacity: 1;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .animate_right {
@@ -169,13 +181,12 @@ section {
 
 .button_above.animate_rotate {
   opacity: 0;
-  transform: translateX(-50px) rotate(270deg); 
+  transform: translateX(-50px) rotate(270deg);
   transition: all 0.8s ease-out;
 }
 
 .button_above.animate_rotate.in-view {
   opacity: 1;
-  transform: translateX(0) rotate(270deg); 
+  transform: translateX(0) rotate(270deg);
 }
 
- 

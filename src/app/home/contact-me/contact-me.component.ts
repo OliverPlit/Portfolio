@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 export class ContactMeComponent implements AfterViewInit {
   http = inject(HttpClient);
   private router = inject(Router);
-  private el = inject(ElementRef); // ElementRef für IntersectionObserver
+  private el = inject(ElementRef); 
 
   // --- Language & Translations ---
   lang: 'de' | 'en' = 'en';
@@ -57,7 +57,7 @@ export class ContactMeComponent implements AfterViewInit {
   touched = { name: false, email: false, message: false, privacy: false };
 
   post = {
-    endPoint: 'https://oliver-plit.com/',
+    endPoint: 'https://oliver-plit.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: { 'Content-Type': 'text/plain', responseType: 'text' },
@@ -79,28 +79,33 @@ export class ContactMeComponent implements AfterViewInit {
   markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
     this.touched[field] = true;
   }
+onSubmit(ngForm: NgForm) {
+  Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
 
-  onSubmit(ngForm: NgForm) {
-    Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
-
-    if (ngForm.valid) {
-      this.http.post(this.post.endPoint, this.contactData, {
-        headers: { 'Content-Type': 'application/json' },
-        responseType: 'text'
-      }).subscribe({
-        next: response => {
-          this.successMsg = 'Formular erfolgreich versendet!';
-          ngForm.resetForm();
-          this.acceptedPrivacy = false;
-          Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
-        },
-        error: error => {
-          console.error(error);
-          this.successMsg = 'Fehler beim Senden der Mail!';
-        }
-      });
-    }
+  if (ngForm.valid) {
+    this.http.post(this.post.endPoint, this.contactData, {
+      headers: { 'Content-Type': 'application/json' },
+      responseType: 'text'
+    }).subscribe({
+      next: response => {
+        this.successMsg = 'Formular erfolgreich versendet!';
+        ngForm.resetForm();
+        this.acceptedPrivacy = false;
+        Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
+        setTimeout(() => {
+          this.successMsg = '';
+        }, 3000); 
+      },
+      error: error => {
+        console.error(error);
+        this.successMsg = 'Fehler beim Senden der Mail!';
+        setTimeout(() => {
+          this.successMsg = '';
+        }, 3000);
+      }
+    });
   }
+}
 
   goTo(path: string) {
     this.router.navigate([path]).then(() => window.scrollTo({ top: 0, behavior: 'smooth' }));

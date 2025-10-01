@@ -11,7 +11,7 @@
       grid-template-columns: repeat(auto-fit, minmax(120px, auto));
       margin-top: 30px;
       gap: 25px;
-      padding: 0 30px 0px 45px;
+      padding: 0 20px 0px 20px;
     }
   }
 
@@ -117,21 +117,14 @@
 
   }
 
-  section {
-    div {
-      gap: 10px;
-
-    }
-  }
-
-
-  section {
-    >div {
-      grid-template-columns: repeat(auto-fit, minmax(65px, auto));
-    }
+  .arrow_responsive {
+    padding-left: 120px !important;
   }
 
   .tech-content {
+    grid-template-columns: repeat(auto-fill, 65px) !important;
+    justify-content: center;
+
     >img {
       width: 50px !important;
     }
@@ -143,8 +136,6 @@
     height: 45px;
     margin-bottom: 20px;
     width: 100%;
-    height: auto;
-    display: block;
   }
 
 
