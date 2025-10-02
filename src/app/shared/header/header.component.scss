@@ -75,7 +75,9 @@ header {
     }
 
   }
-
+a:hover {
+  cursor: pointer;
+}
   a:target {
     text-decoration: underline;
     color: #02F4BF;

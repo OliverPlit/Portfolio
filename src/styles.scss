@@ -73,9 +73,12 @@ h2 {
 
 #why_me,
 #skills,
-#projects,
+#projects {
+  scroll-margin-top: 100px;
+}
+
 #contact {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 
 @media (max-width: 800px) {

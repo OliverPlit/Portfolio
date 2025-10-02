@@ -32,6 +32,16 @@ export class HeaderComponent {
     this.langService.lang$.subscribe(l => this.lang = l);
   }
 
+
+scrollToSection(id: string) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    this.closeMenu(); 
+  }
+}
+
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

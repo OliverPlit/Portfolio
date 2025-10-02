@@ -5,7 +5,7 @@ $max-inner: 1224px;
   width: 100%;
   max-width: $max-inner;
   margin: 0 auto;
-  padding: 0 $pad;
+  padding: 20px $pad;
   box-sizing: border-box;
 }
 
@@ -62,6 +62,6 @@ section {
 .feedback-wrapper {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 32px;
-  padding: 30px;
-}
+  }

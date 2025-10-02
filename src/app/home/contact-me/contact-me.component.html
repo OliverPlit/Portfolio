@@ -68,7 +68,7 @@
         
       </div>
       <span class="error_message" *ngIf="touched.message && message.invalid">
-          <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
+          <span class="error_message" *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
           <span class="error_message" *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen
             haben</span>
         </span>
