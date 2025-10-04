@@ -361,7 +361,6 @@ button.active {
 
 .error_message {
     font-family: 'RobotMonoMedium';
-    display: block;
     margin-left: 290px;
     font-size: 12px;
     color: red !important;
@@ -378,7 +377,7 @@ button.active {
 
 .animate_left {
     opacity: 0;
-    transform: translateX(-50px); // Start links außerhalb
+    transform: translateX(-50px); 
     transition: all 0.8s ease-out;
 }
 

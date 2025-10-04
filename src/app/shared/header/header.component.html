@@ -1,13 +1,13 @@
 <header>
   <div>
-    <a href="">
-      <img class="logo" src="../../../assets/logos/fertig_logo.png" alt="logo">
-    </a>
+ <a (click)="goTo('')">
+    <img class="logo" src="../../../assets/logos/fertig_logo.png" alt="logo">
+</a>
 
-    <a href="#why_me" class="font">{{ t('NAV_WHY_ME') }}</a>
-    <a href="#skills" class="font">{{ t('NAV_SKILLS') }}</a>
-    <a href="#projects" class="font">{{ t('NAV_PROJECTS') }}</a>
-    <a href="#contact" class="font">{{ t('NAV_CONTACT') }}</a>
+   <a (click)="goToSection('why_me')" class="font">{{ t('NAV_WHY_ME') }}</a>
+    <a (click)="goToSection('skills')" class="font">{{ t('NAV_SKILLS') }}</a>
+    <a (click)="goToSection('projects')" class="font">{{ t('NAV_PROJECTS') }}</a>
+    <a (click)="goToSection('contact')" class="font">{{ t('NAV_CONTACT') }}</a>
 
     <div class="language">
       <p class="font">
@@ -20,10 +20,10 @@
     <div class="mobile-menu" *ngIf="isMenuOpen">
       <img src="../../../assets/icons/close.png" alt="" (click)="closeMenu()">
       <div>
-        <a (click)="scrollToSection('why_me')" class="font_responsive">{{ t('NAV_WHY_ME') }}</a>
-        <a (click)="scrollToSection('skills')" class="font_responsive">{{ t('NAV_SKILLS') }}</a>
-        <a (click)="scrollToSection('projects')" class="font_responsive">{{ t('NAV_PROJECTS') }}</a>
-        <a (click)="scrollToSection('contact')" class="font_responsive">{{ t('NAV_CONTACT') }}</a>
+         <a (click)="goToSection('why_me')" class="font_responsive">{{ t('NAV_WHY_ME') }}</a>
+    <a (click)="goToSection('skills')" class="font_responsive">{{ t('NAV_SKILLS') }}</a>
+    <a (click)="goToSection('projects')" class="font_responsive">{{ t('NAV_PROJECTS') }}</a>
+    <a (click)="goToSection('contact')" class="font_responsive">{{ t('NAV_CONTACT') }}</a>
         <div>
           <p class="font_responsive">
             <span (click)="switchLang('de')">DE</span> |

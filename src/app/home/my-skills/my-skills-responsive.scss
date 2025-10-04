@@ -1,18 +1,28 @@
+@media (max-width: 1224px) {
+.tech-content {
+      grid-template-columns: repeat(5, 88px) !important;
+    gap: 110px!important;
+
+}
+
+
+}
+
+@media (max-width: 990px) {
+
+.tech-content {
+    gap: 80px!important;
+
+}
+
+}
+
 
 @media (max-width: 820px) {
   h2 {
     padding: 0;
     display: flex;
     justify-content: center;
-  }
-
-  section {
-
-    >div {
-      grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-      margin-top: 30px;
-      padding: 0 20px 0px 20px;
-    }
   }
 
   .arrow_responsive {
@@ -28,8 +38,9 @@
     }
   }
 .tech-content {
-  grid-template-columns: repeat(auto-fit, minmax(120px, auto));  // oder 150px
-  justify-content: center;  // Zentriert das Grid horizontal
+  grid-template-columns: repeat(4,88px)!important;  
+  justify-content: center !important; 
+  gap: 60px!important;
 }
 
 
@@ -112,7 +123,7 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 570px) {
   h2 {
     font-weight: 700;
     font-style: Bold;
@@ -122,13 +133,11 @@
 
   }
 
-  .arrow_responsive {
-    padding-left: 120px !important;
-  }
 
   .tech-content {
-    grid-template-columns: repeat(auto-fill, 65px) !important;
+    grid-template-columns: repeat(3, 65px) !important;
     justify-content: center;
+    gap: 30px !important;
 
     >img {
       width: 50px !important;

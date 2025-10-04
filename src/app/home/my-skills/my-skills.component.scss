@@ -9,11 +9,11 @@ h2 {
 }
 
 .container {
-    width: 100%;
-    max-width: $max-inner;
-    margin: 0 auto;
-    padding: 0 $pad;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: $max-inner;
+  margin: 0 auto;
+  padding: 0 $pad;
+  box-sizing: border-box;
 }
 
 
@@ -22,31 +22,37 @@ section {
   height: auto;
   max-height: 100%;
   padding-top: 50px;
-padding-bottom: 120px;
+  padding-bottom: 120px;
   box-sizing: border-box;
 
   >div {
-     @extend .container;
-             padding-top: 30px;
+    @extend .container;
+    padding-top: 30px;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 25px;
-    align-items: center;
-    max-width: 1275px;
-    margin: 0 auto;
+   
 
   }
 
 }
 
 
-.button_green {
-      padding-top: 10px;
-    padding-right: 15px;
-    padding-bottom:10px;
-    padding-left: 15px;
+.tech-content {
+ display: grid;
+    grid-template-columns: repeat(6, 88px);
+    gap: 130px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1275px;
+    margin: 0 auto;
 }
+
+.button_green {
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
 .img-hover-text {
   position: relative;
   display: inline-block;
@@ -72,23 +78,44 @@ padding-bottom: 120px;
     opacity: 1;
   }
 }
-.tech-content {
-  opacity: 1;
 
+
+.tech-content img:nth-child(1) {
+  transition-delay: 0.1s;
 }
 
+.tech-content img:nth-child(2) {
+  transition-delay: 0.2s;
+}
 
-.tech-content img:nth-child(1) { transition-delay: 0.1s; }
-.tech-content img:nth-child(2) { transition-delay: 0.2s; }
-.tech-content img:nth-child(3) { transition-delay: 0.3s; }
-.tech-content img:nth-child(4) { transition-delay: 0.4s; }
-.tech-content img:nth-child(5) { transition-delay: 0.5s; }
-.tech-content img:nth-child(6) { transition-delay: 0.6s; }
-.tech-content img:nth-child(7) { transition-delay: 0.7s; }
-.tech-content img:nth-child(8) { transition-delay: 0.8s; }
-.tech-content img:nth-child(9) { transition-delay: 0.9s; }
-.tech-content img:nth-child(10) { transition-delay: 1.0s; }
+.tech-content img:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
+.tech-content img:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
+.tech-content img:nth-child(5) {
+  transition-delay: 0.5s;
+}
 
+.tech-content img:nth-child(6) {
+  transition-delay: 0.6s;
+}
 
+.tech-content img:nth-child(7) {
+  transition-delay: 0.7s;
+}
+
+.tech-content img:nth-child(8) {
+  transition-delay: 0.8s;
+}
+
+.tech-content img:nth-child(9) {
+  transition-delay: 0.9s;
+}
+
+.tech-content img:nth-child(10) {
+  transition-delay: 1.0s;
+}

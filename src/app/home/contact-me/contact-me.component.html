@@ -56,8 +56,8 @@
             required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
             (blur)="markTouched('email')">
           <span class="error error_email" *ngIf="touched.email && email.invalid">
-            <span *ngIf="email.errors?.['required']">Email ist erforderlich</span>
-            <span *ngIf="email.errors?.['pattern']">Email ist ungültig</span>
+            <span *ngIf="email.errors?.['required']" class="error_email_two">Email ist erforderlich </span>
+            <span *ngIf="email.errors?.['pattern']" >Email ist ungültig</span>
           </span>
         </div>
 
@@ -68,8 +68,8 @@
         
       </div>
       <span class="error_message" *ngIf="touched.message && message.invalid">
-          <span class="error_message" *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
-          <span class="error_message" *ngIf="message.errors?.['minlength']">Nachricht muss mindestens 5 Zeichen
+          <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
+          <span  *ngIf="message.errors?.['minlength']">Nachricht muss 5 Zeichen
             haben</span>
         </span>
 

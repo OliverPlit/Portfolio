@@ -100,11 +100,6 @@
         display: none;
     }
 
-    .error_message {
-
-        margin-left: 100px;
-
-    }
 
 }
 
@@ -208,17 +203,29 @@
     }
 
     .error_message {
-        margin-left: 0px;
-  word-break: break-word;
-
+display: flex;
+justify-content: center;
+white-space: nowrap;
+margin-right: 30px;
+margin-left: 30px;
     }
 
 .inputs > div .error_email {
   position: absolute;
   bottom: -20px;      
   left: auto;
-  right: 50px;        
+  right: 40px;        
  
+}
+
+
+.inputs > div .error_email_two {
+  position: absolute;
+  bottom: 3px;      
+  left: auto;
+  right: -15px !important;  
+white-space: nowrap;
+
 }
 
 

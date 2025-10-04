@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../language.service'; 
+import { Router } from '@angular/router';
+
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-header',
@@ -28,18 +30,35 @@ export class HeaderComponent {
     }
   };
 
-  constructor(private langService: LanguageService) {
-    this.langService.lang$.subscribe(l => this.lang = l);
+  constructor(
+    private router: Router,
+    private langService: LanguageService
+  ) { }
+
+  goTo(path: string) {
+    this.router.navigate([path]).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
-
-scrollToSection(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-    this.closeMenu(); 
+  goToSection(id: string) {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          this.scrollSmooth(id);
+        }, 100);
+      });
+    } else {
+      this.scrollSmooth(id);
+    }
   }
-}
+
+  private scrollSmooth(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 
   toggleMenu() {
