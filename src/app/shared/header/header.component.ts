@@ -46,10 +46,12 @@ export class HeaderComponent {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
           this.scrollSmooth(id);
+           this.closeMenu();
         }, 100);
       });
     } else {
       this.scrollSmooth(id);
+       this.closeMenu();
     }
   }
 

@@ -119,6 +119,13 @@
     width: 150px;
     height: auto;
   }
+
+  .tech-content {
+    grid-template-columns: repeat(4, 40px) !important;
+    justify-content: center !important;
+    gap: 70px !important;
+
+  }
 }
 
 
@@ -133,16 +140,13 @@
 
   }
 
+ .tech-content {
+    grid-template-columns: repeat(3, 40px) !important;
+    justify-content: center !important;
+    gap: 50px !important;
 
-  .tech-content {
-    grid-template-columns: repeat(3, 65px) !important;
-    justify-content: center;
-    gap: 30px !important;
-
-    >img {
-      width: 50px !important;
-    }
   }
+  
 
 
   img {

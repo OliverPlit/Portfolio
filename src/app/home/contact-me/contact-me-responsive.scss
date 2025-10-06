@@ -17,6 +17,11 @@
     .arrow_down {
         margin-right: 30px;
     }
+    .error_message {
+    position: absolute;
+    left: 570px;
+    
+}
 }
 
 
@@ -100,7 +105,11 @@
         display: none;
     }
 
-
+.error_message {
+    position: absolute;
+    left: 290px;
+    
+}
 }
 
 @media (max-width: 700px) {
@@ -208,6 +217,7 @@ justify-content: center;
 white-space: nowrap;
 margin-right: 30px;
 margin-left: 30px;
+margin-bottom: 10px;
     }
 
 .inputs > div .error_email {
