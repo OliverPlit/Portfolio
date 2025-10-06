@@ -63,6 +63,12 @@ p {
 
 }
 
+@media (max-width: 900px) {
+    section {
+        height: auto;
+    }
+}
+
 @media (max-width: 600px) {
 
     section {

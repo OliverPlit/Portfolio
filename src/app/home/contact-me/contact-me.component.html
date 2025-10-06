@@ -1,5 +1,5 @@
 <section>
-  <div class="firstcontainer ">
+  <div class="firstcontainer">
 
     <div class="animate_left">
       <h2>{{ t('HEADER') }}</h2>
@@ -22,18 +22,14 @@
         </div>
         <div class="contact_sections phone">
           <a href="tel:+491575434352452">
-
             <div class="icon"></div>
           </a>
-
           <p class="font">
             <span class="label_email">{{ t('PHONE_LABEL') }}</span> +49 1575 4343 52452
           </p>
         </div>
       </div>
     </div>
-
-
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate class="animate_left">
       <div class="arrow_down_responsive">
@@ -43,43 +39,34 @@
       </div>
       <div class="inputs">
         <div>
-          <!-- Name Input -->
           <input [(ngModel)]="contactData.name" name="Your Name" type="text" placeholder="{{ t('NAME_INPUT') }}"
             required minlength="3" #name="ngModel" (blur)="markTouched('name')">
           <span class="error error_name" *ngIf="touched.name && name.invalid">
-            <span *ngIf="name.errors?.['required']">Name ist erforderlich</span>
-            <span *ngIf="name.errors?.['minlength']">Name muss 3 Zeichen haben</span>
+            <span *ngIf="name.errors?.['required']">{{ t('ERROR_NAME_REQUIRED') }}</span>
+            <span *ngIf="name.errors?.['minlength']">{{ t('ERROR_NAME_MIN') }}</span>
           </span>
 
-          <!-- Email Input -->
           <input [(ngModel)]="contactData.email" name="Your Email" type="email" placeholder="{{ t('MAIL_INPUT') }}"
             required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
             (blur)="markTouched('email')">
           <span class="error error_email" *ngIf="touched.email && email.invalid">
-            <span *ngIf="email.errors?.['required']" class="error_email_two">Email ist erforderlich </span>
-            <span *ngIf="email.errors?.['pattern']" >Email ist ungültig</span>
+            <span *ngIf="email.errors?.['required']">{{ t('ERROR_EMAIL_REQUIRED') }}</span>
+            <span class="error_email_two" *ngIf="email.errors?.['pattern']">{{ t('ERROR_EMAIL_INVALID') }}</span>
           </span>
         </div>
 
-        <!-- Message -->
-
         <textarea [(ngModel)]="contactData.message" name="Your Message" placeholder="{{ t('MESSAGE_INPUT') }}" required
           minlength="5" #message="ngModel" (blur)="markTouched('message')"></textarea>
-        
-      </div>
-      <span class="error_message" *ngIf="touched.message && message.invalid">
-          <span *ngIf="message.errors?.['required']">Nachricht ist erforderlich</span>
-          <span  *ngIf="message.errors?.['minlength']">Nachricht muss 5 Zeichen
-            haben</span>
+        <span class="error_message" *ngIf="touched.message && message.invalid">
+          <span class="error_message_one" *ngIf="message.errors?.['required']">{{ t('ERROR_MESSAGE_REQUIRED') }}</span>
+          <span  *ngIf="message.errors?.['minlength']">{{ t('ERROR_MESSAGE_MIN') }}</span>
         </span>
+      </div>
 
-      <!-- Checkbox -->
       <div class="checkbox_div">
-
         <label>
           <input class="custom_checkbox" type="checkbox" [(ngModel)]="acceptedPrivacy" name="privacy" required
-            #privacy="ngModel" (blur)="markTouched('privacy')"
-            [ngClass]="{'filled': name.valid && email.valid && message.valid}">
+            #privacy="ngModel" (blur)="markTouched('privacy')">
           <span class="fonts">
             {{ t('PRIVACY_POLICY_CONTACT_PART1') }}
             <a (click)="goTo('privacy-policy')">{{ t('PRIVACY_POLICY_CONTACT_LINK') }}</a>
@@ -87,22 +74,15 @@
           </span>
         </label>
       </div>
+      <div class="error" *ngIf="touched.privacy && privacy.invalid">{{ t('ERROR_PRIVACY') }}</div>
 
-      <div class="error" *ngIf="touched.privacy && privacy.invalid">
-        Bitte akzeptiere die Datenschutzbestimmungen
-      </div>
-
-      <!-- Button -->
       <div class="button_section">
         <button [disabled]="contactForm.invalid" [ngClass]="{'active': contactForm.valid}">
           {{ t('SEND_BUTTON') }}
         </button>
       </div>
 
-      <!-- Erfolgsnachricht -->
-<div class="font success-message" *ngIf="successMsg">{{ successMsg }}</div>
+      <div class="font success-message" *ngIf="successMsg">{{ successMsg }}</div>
     </form>
-
-
   </div>
 </section>

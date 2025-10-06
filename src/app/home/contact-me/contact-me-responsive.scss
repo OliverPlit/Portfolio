@@ -17,11 +17,12 @@
     .arrow_down {
         margin-right: 30px;
     }
+
     .error_message {
-    position: absolute;
-    left: 570px;
-    
-}
+        position: absolute;
+        left: 570px;
+
+    }
 }
 
 
@@ -105,11 +106,12 @@
         display: none;
     }
 
-.error_message {
-    position: absolute;
-    left: 290px;
-    
-}
+    .error_message {
+        position: absolute;
+        top: 250px;
+        left: 290px;
+
+    }
 }
 
 @media (max-width: 700px) {
@@ -152,6 +154,13 @@
 
     .label_email {
         display: none;
+    }
+
+    .error_message {
+        position: absolute;
+        top: 220px;
+        left: 190px;
+
     }
 }
 
@@ -212,38 +221,63 @@
     }
 
     .error_message {
-display: flex;
-justify-content: center;
-white-space: nowrap;
-margin-right: 30px;
-margin-left: 30px;
-margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 220px;
+        left: 100px;
     }
 
-.inputs > div .error_email {
-  position: absolute;
-  bottom: -20px;      
-  left: auto;
-  right: 40px;        
- 
+
+     .error_message_one {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 55px;
+        white-space: nowrap;
+    }
+
+    .inputs>div .error_email {
+        position: absolute;
+        bottom: -20px;
+        left: auto;
+        right: 40px;
+
+    }
+
+
+    .inputs>div .error_email_two {
+        position: absolute;
+        bottom: 3px;
+        left: auto;
+        right: -15px !important;
+        white-space: nowrap;
+
+    }
+
+
+    .inputs>div .error_name {
+        position: absolute;
+        bottom: 65px;
+        left: auto;
+        right: 0px;
+
+    }
 }
 
+@media (max-width: 450px) {
+    .error_message_one {
+        position: absolute;
+        left: 30px !important;
+        right: 20px;
 
-.inputs > div .error_email_two {
-  position: absolute;
-  bottom: 3px;      
-  left: auto;
-  right: -15px !important;  
-white-space: nowrap;
+    }
 
-}
+      .error_message {
+        position: absolute;
+        left: 30px !important;
+        right: 20px;
+    
 
-
-.inputs > div .error_name {
-  position: absolute;
-  bottom: 65px;      
-  left: auto;
-  right: 0px;   
-  
-}
+    }
 }

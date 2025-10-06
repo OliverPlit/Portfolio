@@ -18,9 +18,8 @@ import { Router } from '@angular/router';
 export class ContactMeComponent implements AfterViewInit {
   http = inject(HttpClient);
   private router = inject(Router);
-  private el = inject(ElementRef); 
+  private el = inject(ElementRef);
 
-  // --- Language & Translations ---
   lang: 'de' | 'en' = 'en';
   translations = {
     de: {
@@ -35,6 +34,15 @@ export class ContactMeComponent implements AfterViewInit {
       NAME_INPUT: 'Dein Name',
       MAIL_INPUT: 'Deine Email',
       MESSAGE_INPUT: 'Deine Nachricht',
+      ERROR_NAME_REQUIRED: 'Name ist erforderlich',
+      ERROR_NAME_MIN: 'Name muss 3 Zeichen haben',
+      ERROR_EMAIL_REQUIRED: 'Email ist erforderlich',
+      ERROR_EMAIL_INVALID: 'Email ist ungültig',
+      ERROR_MESSAGE_REQUIRED: 'Nachricht ist erforderlich',
+      ERROR_MESSAGE_MIN: 'Nachricht muss 5 Zeichen haben',
+      ERROR_PRIVACY: 'Bitte akzeptiere die Datenschutzbestimmungen',
+      SUCCESS_MSG: 'Formular erfolgreich versendet!',
+      ERROR_MSG: 'Fehler beim Senden der Mail!'
     },
     en: {
       HEADER: 'Contact me',
@@ -48,6 +56,15 @@ export class ContactMeComponent implements AfterViewInit {
       NAME_INPUT: 'Your Name',
       MAIL_INPUT: 'Your Email',
       MESSAGE_INPUT: 'Your Message',
+      ERROR_NAME_REQUIRED: 'Name is required',
+      ERROR_NAME_MIN: 'Name must be at least 3 characters',
+      ERROR_EMAIL_REQUIRED: 'Email is required',
+      ERROR_EMAIL_INVALID: 'Email is invalid',
+      ERROR_MESSAGE_REQUIRED: 'Message is required',
+      ERROR_MESSAGE_MIN: 'Message must be at least 5 characters',
+      ERROR_PRIVACY: 'Please accept the privacy policy',
+      SUCCESS_MSG: 'Form successfully sent!',
+      ERROR_MSG: 'Error sending the mail!'
     }
   };
 
@@ -79,33 +96,29 @@ export class ContactMeComponent implements AfterViewInit {
   markTouched(field: 'name' | 'email' | 'message' | 'privacy') {
     this.touched[field] = true;
   }
-onSubmit(ngForm: NgForm) {
-  Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
 
-  if (ngForm.valid) {
-    this.http.post(this.post.endPoint, this.contactData, {
-      headers: { 'Content-Type': 'application/json' },
-      responseType: 'text'
-    }).subscribe({
-      next: response => {
-        this.successMsg = 'Formular erfolgreich versendet!';
-        ngForm.resetForm();
-        this.acceptedPrivacy = false;
-        Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
-        setTimeout(() => {
-          this.successMsg = '';
-        }, 3000); 
-      },
-      error: error => {
-        console.error(error);
-        this.successMsg = 'Fehler beim Senden der Mail!';
-        setTimeout(() => {
-          this.successMsg = '';
-        }, 3000);
-      }
-    });
+  onSubmit(ngForm: NgForm) {
+    Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = true);
+
+    if (ngForm.valid) {
+      this.http.post(this.post.endPoint, this.contactData, {
+        headers: { 'Content-Type': 'application/json' },
+        responseType: 'text'
+      }).subscribe({
+        next: () => {
+          this.successMsg = this.t('SUCCESS_MSG');
+          ngForm.resetForm();
+          this.acceptedPrivacy = false;
+          Object.keys(this.touched).forEach(key => this.touched[key as keyof typeof this.touched] = false);
+          setTimeout(() => this.successMsg = '', 3000);
+        },
+        error: () => {
+          this.successMsg = this.t('ERROR_MSG');
+          setTimeout(() => this.successMsg = '', 3000);
+        }
+      });
+    }
   }
-}
 
   goTo(path: string) {
     this.router.navigate([path]).then(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
