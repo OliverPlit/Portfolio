@@ -30,6 +30,14 @@ export const PrivacyPolicy = {
       {
         title: '7. Kontakt',
         text: 'Wenn Sie Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung Ihrer persönlichen Daten haben, kontaktieren Sie uns bitte unter:\nEmail: oliverplit2005@gmail.com'
+      },
+      {
+        title: '8. Aufbewahrungsdauer',
+        text: 'Wir speichern personenbezogene Daten nur so lange, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.'
+      },
+      {
+        title: '9. Änderungen dieser Datenschutzerklärung',
+        text: 'Wir behalten uns vor, diese Datenschutzerklärung gelegentlich zu aktualisieren, um Änderungen unserer Datenschutzpraktiken oder rechtlicher Anforderungen zu berücksichtigen.'
       }
     ]
   },
@@ -64,6 +72,14 @@ export const PrivacyPolicy = {
       {
         title: '7. Contact',
         text: 'If you have any questions regarding this Privacy Policy or the processing of your personal data, please contact us at:\nEmail: oliverplit2005@gmail.com'
+      },
+      {
+        title: '8. Data Retention',
+        text: 'We retain personal data only for as long as necessary for the purposes for which it was collected or as required by applicable law.'
+      },
+      {
+        title: '9. Changes to this Privacy Policy',
+        text: 'We reserve the right to update this Privacy Policy periodically to reflect changes in our practices or legal requirements.'
       }
     ]
   }
